@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Sing-Box Subscription Converter
-Converts V2Ray/Clash subscriptions to Sing-Box configuration format.
+Sing-Box Subscription Converter (v2)
 Supports: VLESS, VMess, Shadowsocks, Trojan, Hysteria2, TUIC
+Features: Load Balancer with least_ping strategy, Modern DNS format (1.12+)
 """
 
 import base64
@@ -37,14 +37,12 @@ def fetch_subscription(sub_url: str) -> str:
         
         # Try to decode as Base64
         try:
-            # Add padding if needed
             padding = 4 - len(content) % 4
             if padding != 4:
                 content += '=' * padding
             decoded = base64.b64decode(content).decode('utf-8')
             return decoded
         except Exception:
-            # If not Base64, return as-is
             return content
     except Exception as e:
         logger.error(f"Failed to fetch subscription: {e}")
@@ -74,6 +72,8 @@ def parse_vless(url: str) -> dict:
         tls_config = {"enabled": True}
         if 'sni' in params:
             tls_config["server_name"] = params['sni'][0]
+        if 'alpn' in params:
+            tls_config["alpn"] = params['alpn'][0].split(',')
         if 'fp' in params:
             tls_config["utls"] = {"enabled": True, "fingerprint": params['fp'][0]}
         outbound["tls"] = tls_config
@@ -121,16 +121,12 @@ def parse_vless(url: str) -> dict:
 
 def parse_vmess(url: str) -> dict:
     """Parse vmess:// URL to Sing-Box outbound."""
-    # Format: vmess://base64(json)
     encoded = url.split('://')[1]
-    
-    # Handle fragment (name) if present
     name = None
     if '#' in encoded:
         encoded, name_fragment = encoded.split('#', 1)
         name = unquote(name_fragment)
     
-    # Add padding if needed
     padding = 4 - len(encoded) % 4
     if padding != 4:
         encoded += '=' * padding
@@ -153,7 +149,6 @@ def parse_vmess(url: str) -> dict:
         "alter_id": int(config.get('aid', 0)),
     }
     
-    # TLS
     if config.get('tls') == 'tls':
         tls_config = {"enabled": True}
         if config.get('sni'):
@@ -164,7 +159,6 @@ def parse_vmess(url: str) -> dict:
             tls_config["utls"] = {"enabled": True, "fingerprint": config['fp']}
         outbound["tls"] = tls_config
     
-    # Transport
     network = config.get('net', 'tcp')
     if network == 'ws':
         transport = {"type": "ws"}
@@ -189,7 +183,6 @@ def parse_ss(url: str) -> dict:
     
     userinfo = parsed.username
     if ':' not in userinfo:
-        # Base64 encoded method:password
         try:
             padding = 4 - len(userinfo) % 4
             if padding != 4:
@@ -200,7 +193,7 @@ def parse_ss(url: str) -> dict:
     
     method, password = userinfo.split(':', 1)
     
-    outbound = {
+    return {
         "type": "shadowsocks",
         "tag": name,
         "server": parsed.hostname,
@@ -208,8 +201,6 @@ def parse_ss(url: str) -> dict:
         "method": method,
         "password": password,
     }
-    
-    return outbound
 
 
 def parse_trojan(url: str) -> dict:
@@ -229,7 +220,6 @@ def parse_trojan(url: str) -> dict:
         "password": password,
     }
     
-    # TLS
     tls_config = {"enabled": True}
     if 'sni' in params:
         tls_config["server_name"] = params['sni'][0]
@@ -239,7 +229,6 @@ def parse_trojan(url: str) -> dict:
         tls_config["insecure"] = True
     outbound["tls"] = tls_config
     
-    # Transport
     network = params.get('type', ['tcp'])[0]
     if network == 'ws':
         transport = {"type": "ws"}
@@ -274,7 +263,6 @@ def parse_hysteria2(url: str) -> dict:
         "password": password,
     }
     
-    # TLS
     tls_config = {"enabled": True}
     if 'sni' in params:
         tls_config["server_name"] = params['sni'][0]
@@ -282,7 +270,6 @@ def parse_hysteria2(url: str) -> dict:
         tls_config["insecure"] = True
     outbound["tls"] = tls_config
     
-    # Obfs
     if 'obfs' in params:
         outbound["obfs"] = {"type": params['obfs'][0]}
         if 'obfs-password' in params:
@@ -310,7 +297,6 @@ def parse_tuic(url: str) -> dict:
         "password": password,
     }
     
-    # TLS
     tls_config = {"enabled": True}
     if 'sni' in params:
         tls_config["server_name"] = params['sni'][0]
@@ -318,7 +304,6 @@ def parse_tuic(url: str) -> dict:
         tls_config["insecure"] = True
     outbound["tls"] = tls_config
     
-    # Other params
     if 'congestion_control' in params:
         outbound["congestion_control"] = params['congestion_control'][0]
     if 'udp_relay_mode' in params:
@@ -375,25 +360,45 @@ def deduplicate_servers(servers: list) -> list:
 
 
 def build_config(servers: list) -> dict:
-    """Build the final Sing-Box configuration."""
+    """Build the final Sing-Box configuration with modern DNS and Load Balancer."""
     server_tags = [s['tag'] for s in servers]
     
-    selector_outbound = {
-        "type": "selector",
-        "tag": "proxy",
-        "outbounds": ["auto"] + server_tags,
+    # 🚀 Load Balancer with least_ping strategy for best latency
+    loadbalance_outbound = {
+        "type": "loadbalance",
+        "tag": "🚀 Load Balance",
+        "outbounds": server_tags,
+        "strategy": "least_ping",
+        "url": "https://www.gstatic.com/generate_204",
+        "interval": "3m",
     }
     
+    # ⚡ URLTest for automatic best ping selection (fallback)
     urltest_outbound = {
         "type": "urltest",
-        "tag": "auto",
+        "tag": "⚡ Auto Best",
         "outbounds": server_tags,
         "url": "https://www.gstatic.com/generate_204",
         "interval": "5m",
         "tolerance": 50,
     }
     
-    outbounds = [selector_outbound, urltest_outbound] + servers + [
+    # 🎯 Selector with all options
+    selector_outbound = {
+        "type": "selector",
+        "tag": "🎯 Proxy",
+        "outbounds": [
+            "🚀 Load Balance",
+            "⚡ Auto Best",
+            "direct",
+        ] + server_tags,
+    }
+    
+    outbounds = [
+        selector_outbound,
+        loadbalance_outbound,
+        urltest_outbound,
+    ] + servers + [
         {"type": "direct", "tag": "direct"},
         {"type": "block", "tag": "block"},
         {"type": "dns", "tag": "dns-out"},
@@ -405,14 +410,40 @@ def build_config(servers: list) -> dict:
             "level": "info",
             "timestamp": True,
         },
+        # 🆕 Modern DNS format (sing-box 1.12+)
         "dns": {
             "servers": [
-                {"tag": "remote", "address": "tls://8.8.8.8", "detour": "proxy"},
-                {"tag": "local", "address": "1.1.1.1", "detour": "direct"},
-                {"tag": "block", "address": "rcode://success"},
+                {
+                    "tag": "remote",
+                    "type": "tls",
+                    "server": "8.8.8.8",
+                    "server_port": 853,
+                    "detour": "proxy",
+                },
+                {
+                    "tag": "remote-backup",
+                    "type": "https",
+                    "server": "1.1.1.1",
+                    "server_port": 443,
+                    "detour": "proxy",
+                },
+                {
+                    "tag": "local",
+                    "type": "udp",
+                    "server": "1.1.1.1",
+                    "server_port": 53,
+                    "detour": "direct",
+                },
+                {
+                    "tag": "block",
+                    "type": "predefined",
+                    "responses": [{"rcode": "success"}],
+                },
             ],
             "rules": [
                 {"outbound": "any", "server": "remote"},
+                {"rule_set": "geosite-private", "server": "local"},
+                {"rule_set": "geosite-ads", "server": "block"},
             ],
             "final": "remote",
             "strategy": "prefer_ipv4",
@@ -536,7 +567,6 @@ def main():
         config = build_config(servers)
         new_content = json.dumps(config, indent=2, ensure_ascii=False)
         
-        # Check if file exists and compare
         if os.path.exists(OUTPUT_FILE):
             with open(OUTPUT_FILE, 'r', encoding='utf-8') as f:
                 existing_content = f.read()
