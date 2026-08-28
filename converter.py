@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Sing-Box Subscription Converter (v3 - Standard Format)
+Sing-Box Subscription Converter (v4 - Compatible with 1.14+)
 Generates config matching official Sing-Box structure with all fields.
 Supports: VLESS, VMess, Shadowsocks, Trojan, Hysteria2, TUIC
-Features: Load Balancer with least_ping, Modern DNS format (1.12+)
+Features: Load Balancer with least_ping, Modern DNS format (1.12/1.14+)
 """
 
 import base64
@@ -357,7 +357,7 @@ def deduplicate_servers(servers: list) -> list:
 
 
 def build_config(servers: list) -> dict:
-    """Build the final Sing-Box configuration matching official structure."""
+    """Build the final Sing-Box configuration matching official 1.14+ structure."""
     server_tags = [s['tag'] for s in servers]
     
     # 🚀 Load Balancer with least_ping strategy
@@ -401,15 +401,15 @@ def build_config(servers: list) -> dict:
         {"type": "dns", "tag": "dns-out"},
     ]
     
-    # 🎯 ساختار کامل مطابق استاندارد رسمی sing-box
-    # ترتیب دقیق فیلدها حفظ شده است
+    # 🎯 ساختار کامل مطابق استاندارد رسمی sing-box 1.14+
     config = {
         "$schema": "https://sing-box.sagernet.org/schema.json",
         "log": {
             "level": "info",
             "timestamp": True,
         },
-        # 🆕 Modern DNS format (sing-box 1.12+)
+        # 🆕 Modern DNS format (sing-box 1.12+/1.14+)
+        # توجه: برای block کردن از rules با action: "predefined" استفاده می‌شود
         "dns": {
             "servers": [
                 {
@@ -433,16 +433,18 @@ def build_config(servers: list) -> dict:
                     "server_port": 53,
                     "detour": "direct",
                 },
-                {
-                    "tag": "block",
-                    "type": "predefined",
-                    "responses": [{"rcode": "success"}],
-                },
             ],
             "rules": [
+                # 🚫 Block کردن تبلیغات با action: "predefined" (روش جدید 1.14+)
+                {
+                    "rule_set": "geosite-ads",
+                    "action": "predefined",
+                    "rcode": "REFUSED",
+                },
+                # ✅ DNS queries از proxy باید از remote استفاده کنند
                 {"outbound": "any", "server": "remote"},
+                # ✅ دامنه‌های private از local DNS استفاده کنند
                 {"rule_set": "geosite-private", "server": "local"},
-                {"rule_set": "geosite-ads", "server": "block"},
             ],
             "final": "remote",
             "strategy": "prefer_ipv4",
@@ -485,7 +487,6 @@ def build_config(servers: list) -> dict:
                     "rule_set": ["geosite-ir", "geoip-ir", "geosite-private"],
                     "outbound": "direct",
                 },
-                {"rule_set": "geosite-ads", "outbound": "block"},
             ],
             "rule_set": [
                 {
@@ -529,6 +530,7 @@ def build_config(servers: list) -> dict:
                 "enabled": True,
                 "path": "cache.db",
                 "store_fakeip": True,
+                "store_rdrc": True,  # برای 1.14+ می‌تونه store_dns باشه
             },
             "clash_api": {
                 "external_controller": "127.0.0.1:9090",
