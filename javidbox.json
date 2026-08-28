@@ -8,23 +8,47 @@
     "servers": [
       {
         "tag": "remote",
-        "address": "tls://8.8.8.8",
+        "type": "tls",
+        "server": "8.8.8.8",
+        "server_port": 853,
+        "detour": "proxy"
+      },
+      {
+        "tag": "remote-backup",
+        "type": "https",
+        "server": "1.1.1.1",
+        "server_port": 443,
         "detour": "proxy"
       },
       {
         "tag": "local",
-        "address": "1.1.1.1",
+        "type": "udp",
+        "server": "1.1.1.1",
+        "server_port": 53,
         "detour": "direct"
       },
       {
         "tag": "block",
-        "address": "rcode://success"
+        "type": "predefined",
+        "responses": [
+          {
+            "rcode": "success"
+          }
+        ]
       }
     ],
     "rules": [
       {
         "outbound": "any",
         "server": "remote"
+      },
+      {
+        "rule_set": "geosite-private",
+        "server": "local"
+      },
+      {
+        "rule_set": "geosite-ads",
+        "server": "block"
       }
     ],
     "final": "remote",
@@ -60,9 +84,11 @@
   "outbounds": [
     {
       "type": "selector",
-      "tag": "proxy",
+      "tag": "🎯 Proxy",
       "outbounds": [
-        "auto",
+        "🚀 Load Balance",
+        "⚡ Auto Best",
+        "direct",
         "Domain1-TLS",
         "Domain1-TCP",
         "Domain2-TLS",
@@ -303,8 +329,254 @@
       ]
     },
     {
+      "type": "loadbalance",
+      "tag": "🚀 Load Balance",
+      "outbounds": [
+        "Domain1-TLS",
+        "Domain1-TCP",
+        "Domain2-TLS",
+        "Domain2-TCP",
+        "Domain3-TLS",
+        "Domain3-TCP",
+        "Domain4-TLS",
+        "Domain4-TCP",
+        "Domain5-TLS",
+        "Domain5-TCP",
+        "Domain6-TLS",
+        "Domain6-TCP",
+        "Domain7-TLS",
+        "Domain7-TCP",
+        "Domain8-TLS",
+        "Domain8-TCP",
+        "Domain9-TLS",
+        "Domain9-TCP",
+        "Domain10-TLS",
+        "Domain10-TCP",
+        "Domain11-TLS",
+        "Domain11-TCP",
+        "Domain12-TLS",
+        "Domain12-TCP",
+        "Domain13-TLS",
+        "Domain13-TCP",
+        "Domain14-TLS",
+        "Domain14-TCP",
+        "Domain15-TLS",
+        "Domain15-TCP",
+        "Domain16-TLS",
+        "Domain16-TCP",
+        "Domain17-TLS",
+        "Domain17-TCP",
+        "Domain18-TLS",
+        "Domain18-TCP",
+        "Domain19-TLS",
+        "Domain19-TCP",
+        "IP1-TLS",
+        "IP1-TCP",
+        "IP2-TLS",
+        "IP2-TCP",
+        "IP3-TLS",
+        "IP3-TCP",
+        "IP4-TLS",
+        "IP4-TCP",
+        "IP5-TLS",
+        "IP5-TCP",
+        "IP6-TLS",
+        "IP6-TCP",
+        "IP7-TLS",
+        "IP7-TCP",
+        "IP8-TLS",
+        "IP8-TCP",
+        "IP9-TLS",
+        "IP9-TCP",
+        "IP10-TLS",
+        "IP10-TCP",
+        "IP11-TLS",
+        "IP11-TCP",
+        "IP12-TLS",
+        "IP12-TCP",
+        "IP13-TLS",
+        "IP13-TCP",
+        "IP14-TLS",
+        "IP14-TCP",
+        "IP15-TLS",
+        "IP15-TCP",
+        "IP16-TLS",
+        "IP16-TCP",
+        "IP17-TLS",
+        "IP17-TCP",
+        "IP18-TLS",
+        "IP18-TCP",
+        "IP19-TLS",
+        "IP19-TCP",
+        "IP20-TLS",
+        "IP20-TCP",
+        "Domain1-TLS",
+        "Domain2-TLS",
+        "Domain3-TLS",
+        "Domain4-TLS",
+        "Domain5-TLS",
+        "Domain6-TLS",
+        "Domain7-TLS",
+        "Domain8-TLS",
+        "Domain9-TLS",
+        "Domain10-TLS",
+        "Domain11-TLS",
+        "Domain12-TLS",
+        "Domain13-TLS",
+        "Domain14-TLS",
+        "Domain15-TLS",
+        "Domain16-TLS",
+        "Domain17-TLS",
+        "Domain18-TLS",
+        "Domain19-TLS",
+        "Domain20-TLS",
+        "Domain21-TLS",
+        "Domain22-TLS",
+        "Domain23-TLS",
+        "Domain24-TLS",
+        "Domain25-TLS",
+        "Domain26-TLS",
+        "Domain27-TLS",
+        "Domain28-TLS",
+        "Domain29-TLS",
+        "Domain30-TLS",
+        "Domain31-TLS",
+        "Domain32-TLS",
+        "IP1-TLS",
+        "IP2-TLS",
+        "IP3-TLS",
+        "IP4-TLS",
+        "IP5-TLS",
+        "IP6-TLS",
+        "IP7-TLS",
+        "IP8-TLS",
+        "IP9-TLS",
+        "IP10-TLS",
+        "IP11-TLS",
+        "IP12-TLS",
+        "IP13-TLS",
+        "IP14-TLS",
+        "IP15-TLS",
+        "IP16-TLS",
+        "IP17-TLS",
+        "IP18-TLS",
+        "IP19-TLS",
+        "IP20-TLS",
+        "Domain1-TLS",
+        "Domain1-TCP",
+        "Domain2-TLS",
+        "Domain2-TCP",
+        "Domain3-TLS",
+        "Domain3-TCP",
+        "Domain4-TLS",
+        "Domain4-TCP",
+        "Domain5-TLS",
+        "Domain5-TCP",
+        "Domain6-TLS",
+        "Domain6-TCP",
+        "Domain7-TLS",
+        "Domain7-TCP",
+        "Domain8-TLS",
+        "Domain8-TCP",
+        "Domain9-TLS",
+        "Domain9-TCP",
+        "Domain10-TLS",
+        "Domain10-TCP",
+        "Domain11-TLS",
+        "Domain11-TCP",
+        "Domain12-TLS",
+        "Domain12-TCP",
+        "Domain13-TLS",
+        "Domain13-TCP",
+        "Domain14-TLS",
+        "Domain14-TCP",
+        "Domain15-TLS",
+        "Domain15-TCP",
+        "Domain16-TLS",
+        "Domain16-TCP",
+        "Domain17-TLS",
+        "Domain17-TCP",
+        "Domain18-TLS",
+        "Domain18-TCP",
+        "Domain19-TLS",
+        "Domain19-TCP",
+        "IP1-TLS",
+        "IP1-TCP",
+        "IP2-TLS",
+        "IP2-TCP",
+        "IP3-TLS",
+        "IP3-TCP",
+        "IP4-TLS",
+        "IP4-TCP",
+        "IP5-TLS",
+        "IP5-TCP",
+        "IP6-TLS",
+        "IP6-TCP",
+        "IP7-TLS",
+        "IP7-TCP",
+        "IP8-TLS",
+        "IP8-TCP",
+        "IP9-TLS",
+        "IP9-TCP",
+        "IP10-TLS",
+        "IP10-TCP",
+        "IP11-TLS",
+        "IP11-TCP",
+        "IP12-TLS",
+        "IP12-TCP",
+        "IP13-TLS",
+        "IP13-TCP",
+        "IP14-TLS",
+        "IP14-TCP",
+        "IP15-TLS",
+        "IP15-TCP",
+        "IP16-TLS",
+        "IP16-TCP",
+        "IP17-TLS",
+        "IP17-TCP",
+        "IP18-TLS",
+        "IP18-TCP",
+        "IP19-TLS",
+        "IP19-TCP",
+        "IP20-TLS",
+        "IP20-TCP",
+        "CF_V1_www.visa.com_80",
+        "CF_V2_cis.visa.com_8080",
+        "CF_V3_africa.visa.com_8880",
+        "CF_V4_www.visa.com.sg_2052",
+        "CF_V5_www.visaeurope.at_2082",
+        "CF_V6_www.visa.com.mt_2086",
+        "CF_V7_qa.visamiddleeast.com_2095",
+        "CF_V8_usa.visa.com_443",
+        "CF_V9_myanmar.visa.com_8443",
+        "CF_V10_www.visa.com.tw_2053",
+        "CF_V11_www.visaeurope.ch_2083",
+        "CF_V12_www.visa.com.br_2087",
+        "CF_V13_www.visasoutheasteurope.com_2096",
+        "CF官方优选1",
+        "CF官方优选2",
+        "CF官方优选3",
+        "CF官方优选4",
+        "CF官方优选5",
+        "CF官方优选6",
+        "CF官方优选7",
+        "CF官方优选8",
+        "CF官方优选9",
+        "CF官方优选10",
+        "CF官方优选11",
+        "CF官方优选12",
+        "CF官方优选13",
+        "CF官方优选14",
+        "CF官方优选15",
+        "CF官方优选16"
+      ],
+      "strategy": "least_ping",
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "3m"
+    },
+    {
       "type": "urltest",
-      "tag": "auto",
+      "tag": "⚡ Auto Best",
       "outbounds": [
         "Domain1-TLS",
         "Domain1-TCP",
@@ -557,6 +829,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -593,6 +868,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -629,6 +907,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -665,6 +946,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -701,6 +985,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -737,6 +1024,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -773,6 +1063,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -809,6 +1102,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -845,6 +1141,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -881,6 +1180,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -917,6 +1219,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -953,6 +1258,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -989,6 +1297,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -1025,6 +1336,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -1061,6 +1375,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -1097,6 +1414,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -1133,6 +1453,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -1169,6 +1492,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -1205,6 +1531,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -1241,6 +1570,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -1277,6 +1609,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -1313,6 +1648,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -1349,6 +1687,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -1385,6 +1726,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -1421,6 +1765,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -1457,6 +1804,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -1493,6 +1843,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -1529,6 +1882,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -1565,6 +1921,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -1601,6 +1960,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -1637,6 +1999,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -1673,6 +2038,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -1709,6 +2077,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -1745,6 +2116,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -1781,6 +2155,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -1817,6 +2194,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -1853,6 +2233,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -1889,6 +2272,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -1925,6 +2311,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -1961,6 +2350,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -1983,6 +2375,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2005,6 +2400,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2027,6 +2425,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2049,6 +2450,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2071,6 +2475,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2093,6 +2500,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2115,6 +2525,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2137,6 +2550,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2159,6 +2575,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2181,6 +2600,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2203,6 +2625,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2225,6 +2650,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2247,6 +2675,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2269,6 +2700,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2291,6 +2725,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2313,6 +2750,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2335,6 +2775,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2357,6 +2800,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2379,6 +2825,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2401,6 +2850,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2423,6 +2875,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2445,6 +2900,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2467,6 +2925,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2489,6 +2950,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2511,6 +2975,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2533,6 +3000,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2555,6 +3025,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2577,6 +3050,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2599,6 +3075,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2621,6 +3100,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2643,6 +3125,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2665,6 +3150,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2687,6 +3175,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2709,6 +3200,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2731,6 +3225,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2753,6 +3250,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2775,6 +3275,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2797,6 +3300,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2819,6 +3325,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2841,6 +3350,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2863,6 +3375,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2885,6 +3400,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2907,6 +3425,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2929,6 +3450,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2951,6 +3475,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2973,6 +3500,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -2995,6 +3525,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -3017,6 +3550,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -3039,6 +3575,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -3061,6 +3600,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -3083,6 +3625,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -3105,6 +3650,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -3141,6 +3689,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -3177,6 +3728,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -3213,6 +3767,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -3249,6 +3806,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -3285,6 +3845,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -3321,6 +3884,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -3357,6 +3923,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -3393,6 +3962,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -3429,6 +4001,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -3465,6 +4040,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -3501,6 +4079,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -3537,6 +4118,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -3573,6 +4157,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -3609,6 +4196,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -3645,6 +4235,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -3681,6 +4274,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -3717,6 +4313,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -3753,6 +4352,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -3789,6 +4391,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -3825,6 +4430,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -3861,6 +4469,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -3897,6 +4508,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -3933,6 +4547,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -3969,6 +4586,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -4005,6 +4625,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -4041,6 +4664,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -4077,6 +4703,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -4113,6 +4742,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -4149,6 +4781,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -4185,6 +4820,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -4221,6 +4859,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -4257,6 +4898,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -4293,6 +4937,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -4329,6 +4976,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -4365,6 +5015,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -4401,6 +5054,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -4437,6 +5093,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -4473,6 +5132,9 @@
       "tls": {
         "enabled": true,
         "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
