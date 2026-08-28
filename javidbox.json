@@ -26,18 +26,14 @@
         "server": "1.1.1.1",
         "server_port": 53,
         "detour": "direct"
-      },
-      {
-        "tag": "block",
-        "type": "predefined",
-        "responses": [
-          {
-            "rcode": "success"
-          }
-        ]
       }
     ],
     "rules": [
+      {
+        "rule_set": "geosite-ads",
+        "action": "predefined",
+        "rcode": "REFUSED"
+      },
       {
         "outbound": "any",
         "server": "remote"
@@ -45,10 +41,6 @@
       {
         "rule_set": "geosite-private",
         "server": "local"
-      },
-      {
-        "rule_set": "geosite-ads",
-        "server": "block"
       }
     ],
     "final": "remote",
@@ -5775,10 +5767,6 @@
           "geosite-private"
         ],
         "outbound": "direct"
-      },
-      {
-        "rule_set": "geosite-ads",
-        "outbound": "block"
       }
     ],
     "rule_set": [
@@ -5822,7 +5810,8 @@
     "cache_file": {
       "enabled": true,
       "path": "cache.db",
-      "store_fakeip": true
+      "store_fakeip": true,
+      "store_rdrc": true
     },
     "clash_api": {
       "external_controller": "127.0.0.1:9090",
