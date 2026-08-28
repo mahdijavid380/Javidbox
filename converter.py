@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Sing-Box Subscription Converter (v6 - Final version for 1.14+)
+Sing-Box Subscription Converter (v7 - Final stable version)
 Supports: VLESS, VMess, Shadowsocks, Trojan, Hysteria2, TUIC
-Features: Load Balancer with least_ping, Modern DNS (1.14+), Rule Actions (1.11+)
+Features: URLTest for best ping, Modern DNS (1.14+), Rule Actions (1.11+)
 """
 
 import base64
@@ -281,24 +281,27 @@ def deduplicate_servers(servers: list) -> list:
 def build_config(servers: list) -> dict:
     server_tags = [s['tag'] for s in servers]
     
-    loadbalance = {
-        "type": "loadbalance", "tag": "🚀 Load Balance",
-        "outbounds": server_tags, "strategy": "least_ping",
-        "url": "https://www.gstatic.com/generate_204", "interval": "3m",
-    }
+    # ⚡ URLTest: انتخاب خودکار بهترین سرور با کمترین ping
     urltest = {
-        "type": "urltest", "tag": "⚡ Auto Best",
+        "type": "urltest",
+        "tag": "⚡ Auto Best",
         "outbounds": server_tags,
         "url": "https://www.gstatic.com/generate_204",
-        "interval": "5m", "tolerance": 50,
+        "interval": "5m",
+        "tolerance": 50,
     }
+    
+    # 🎯 Selector: انتخاب دستی یا خودکار
     selector = {
-        "type": "selector", "tag": "🎯 Proxy",
-        "outbounds": ["🚀 Load Balance", "⚡ Auto Best", "direct"] + server_tags,
+        "type": "selector",
+        "tag": "🎯 Proxy",
+        "outbounds": ["⚡ Auto Best", "direct"] + server_tags,
+        "default": "⚡ Auto Best",
     }
     
     outbounds = [
-        selector, loadbalance, urltest,
+        selector,
+        urltest,
     ] + servers + [
         {"type": "direct", "tag": "direct"},
         {"type": "block", "tag": "block"},
@@ -331,7 +334,6 @@ def build_config(servers: list) -> dict:
         "http_clients": [],
         "network_namespaces": [],
         "endpoints": [],
-        # ✅ Inbounds بدون هیچ فیلد منسوخ
         "inbounds": [
             {
                 "type": "tun",
@@ -351,7 +353,6 @@ def build_config(servers: list) -> dict:
         "outbounds": outbounds,
         "route": {
             "rules": [
-                # ⚠️ ترتیب خیلی مهمه! اول resolve بعد sniff
                 {
                     "inbound": ["tun-in", "mixed-in"],
                     "action": "resolve",
