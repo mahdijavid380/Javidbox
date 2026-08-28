@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
-Sing-Box Subscription Converter (v2)
+Sing-Box Subscription Converter (v3 - Standard Format)
+Generates config matching official Sing-Box structure with all fields.
 Supports: VLESS, VMess, Shadowsocks, Trojan, Hysteria2, TUIC
-Features: Load Balancer with least_ping strategy, Modern DNS format (1.12+)
+Features: Load Balancer with least_ping, Modern DNS format (1.12+)
 """
 
 import base64
@@ -35,7 +36,6 @@ def fetch_subscription(sub_url: str) -> str:
         response.raise_for_status()
         content = response.text.strip()
         
-        # Try to decode as Base64
         try:
             padding = 4 - len(content) % 4
             if padding != 4:
@@ -66,7 +66,6 @@ def parse_vless(url: str) -> dict:
         "uuid": uuid,
     }
     
-    # Security (TLS/Reality)
     security = params.get('security', ['none'])[0]
     if security == 'tls':
         tls_config = {"enabled": True}
@@ -89,12 +88,10 @@ def parse_vless(url: str) -> dict:
             reality_config["utls"] = {"enabled": True, "fingerprint": params['fp'][0]}
         outbound["tls"] = reality_config
     
-    # Flow (XTLS)
     flow = params.get('flow', [''])[0]
     if flow:
         outbound["flow"] = flow
     
-    # Transport
     network = params.get('type', ['tcp'])[0]
     if network == 'ws':
         transport = {"type": "ws"}
@@ -360,10 +357,10 @@ def deduplicate_servers(servers: list) -> list:
 
 
 def build_config(servers: list) -> dict:
-    """Build the final Sing-Box configuration with modern DNS and Load Balancer."""
+    """Build the final Sing-Box configuration matching official structure."""
     server_tags = [s['tag'] for s in servers]
     
-    # 🚀 Load Balancer with least_ping strategy for best latency
+    # 🚀 Load Balancer with least_ping strategy
     loadbalance_outbound = {
         "type": "loadbalance",
         "tag": "🚀 Load Balance",
@@ -373,7 +370,7 @@ def build_config(servers: list) -> dict:
         "interval": "3m",
     }
     
-    # ⚡ URLTest for automatic best ping selection (fallback)
+    # ⚡ URLTest for automatic best ping
     urltest_outbound = {
         "type": "urltest",
         "tag": "⚡ Auto Best",
@@ -404,6 +401,8 @@ def build_config(servers: list) -> dict:
         {"type": "dns", "tag": "dns-out"},
     ]
     
+    # 🎯 ساختار کامل مطابق استاندارد رسمی sing-box
+    # ترتیب دقیق فیلدها حفظ شده است
     config = {
         "$schema": "https://sing-box.sagernet.org/schema.json",
         "log": {
@@ -454,6 +453,12 @@ def build_config(servers: list) -> dict:
             "server_port": 123,
             "interval": "30m",
         },
+        # فیلدهای خالی مطابق ساختار استاندارد
+        "certificate": {},
+        "certificate_providers": [],
+        "http_clients": [],
+        "network_namespaces": [],
+        "endpoints": [],
         "inbounds": [
             {
                 "type": "tun",
@@ -518,6 +523,7 @@ def build_config(servers: list) -> dict:
             ],
             "auto_detect_interface": True,
         },
+        "services": [],
         "experimental": {
             "cache_file": {
                 "enabled": True,
