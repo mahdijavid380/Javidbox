@@ -60,6 +60,11 @@
     "server_port": 123,
     "interval": "30m"
   },
+  "certificate": {},
+  "certificate_providers": [],
+  "http_clients": [],
+  "network_namespaces": [],
+  "endpoints": [],
   "inbounds": [
     {
       "type": "tun",
@@ -5812,6 +5817,7 @@
     ],
     "auto_detect_interface": true
   },
+  "services": [],
   "experimental": {
     "cache_file": {
       "enabled": true,
