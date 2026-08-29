@@ -1,96 +1,65 @@
 {
-  "$schema": "https://sing-box.sagernet.org/schema.json",
   "log": {
-    "level": "info",
+    "disabled": false,
+    "level": "warn",
     "timestamp": true
   },
   "dns": {
     "servers": [
       {
-        "tag": "remote",
-        "type": "tls",
-        "server": "8.8.8.8",
-        "server_port": 853,
-        "detour": "proxy"
-      },
-      {
-        "tag": "remote-backup",
         "type": "https",
-        "server": "1.1.1.1",
-        "server_port": 443,
-        "detour": "proxy"
+        "tag": "dns-remote",
+        "server": "8.8.8.8"
       },
       {
-        "tag": "local",
         "type": "udp",
-        "server": "1.1.1.1",
-        "server_port": 53,
-        "detour": "direct"
+        "tag": "dns-direct",
+        "server": "8.8.8.8"
       }
     ],
     "rules": [
       {
-        "rule_set": "geosite-ads",
-        "action": "predefined",
-        "rcode": "REFUSED"
+        "clash_mode": "Direct",
+        "server": "dns-direct"
       },
       {
-        "outbound": "any",
-        "server": "remote"
-      },
-      {
-        "rule_set": "geosite-private",
-        "server": "local"
+        "clash_mode": "Global",
+        "server": "dns-remote"
       }
     ],
-    "final": "remote",
     "strategy": "prefer_ipv4"
   },
-  "ntp": {
-    "enabled": true,
-    "server": "time.apple.com",
-    "server_port": 123,
-    "interval": "30m"
-  },
-  "certificate": {},
-  "certificate_providers": [],
-  "http_clients": [],
-  "network_namespaces": [],
-  "endpoints": [],
   "inbounds": [
     {
       "type": "tun",
       "tag": "tun-in",
       "address": [
-        "172.19.0.1/30",
-        "fdfe:dcba:9876::1/126"
+        "172.19.0.1/28"
       ],
+      "mtu": 9000,
       "auto_route": true,
       "strict_route": true,
-      "stack": "system"
+      "stack": "mixed"
     },
     {
       "type": "mixed",
       "tag": "mixed-in",
       "listen": "127.0.0.1",
-      "listen_port": 7890
+      "listen_port": 2334
+    },
+    {
+      "type": "socks",
+      "tag": "socks-in",
+      "listen": "127.0.0.1",
+      "listen_port": 2333
     }
   ],
   "outbounds": [
     {
-      "type": "direct",
-      "tag": "direct"
-    },
-    {
-      "type": "block",
-      "tag": "block"
-    },
-    {
       "type": "selector",
-      "tag": "proxy",
+      "tag": "✅ Select",
       "outbounds": [
-        "urltest",
-        "direct",
+        "Best Ping 🚀",
         "Domain1-TLS",
         "Domain1-TCP",
         "Domain2-TLS",
@@ -329,11 +298,11 @@
         "CF官方优选15",
         "CF官方优选16"
       ],
-      "default": "urltest"
+      "interrupt_exist_connections": false
     },
     {
       "type": "urltest",
-      "tag": "urltest",
+      "tag": "Best Ping 🚀",
       "outbounds": [
         "Domain1-TLS",
         "Domain1-TCP",
@@ -574,8 +543,13 @@
         "CF官方优选16"
       ],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "5m",
-      "tolerance": 50
+      "interval": "30s",
+      "interrupt_exist_connections": false
+    },
+    {
+      "type": "direct",
+      "tag": "direct",
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -600,7 +574,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -614,7 +589,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -639,7 +615,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -653,7 +630,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -678,7 +656,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -692,7 +671,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -717,7 +697,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -731,7 +712,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -756,7 +738,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -770,7 +753,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -795,7 +779,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -809,7 +794,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -834,7 +820,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -848,7 +835,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -873,7 +861,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -887,7 +876,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -912,7 +902,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -926,7 +917,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -951,7 +943,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -965,7 +958,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -990,7 +984,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -1004,7 +999,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -1029,7 +1025,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -1043,7 +1040,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -1068,7 +1066,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -1082,7 +1081,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -1107,7 +1107,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -1121,7 +1122,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -1146,7 +1148,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -1160,7 +1163,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -1185,7 +1189,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -1199,7 +1204,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -1224,7 +1230,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -1238,7 +1245,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -1263,7 +1271,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -1277,7 +1286,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -1302,7 +1312,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -1316,7 +1327,8 @@
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2121,7 +2133,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2146,7 +2159,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2171,7 +2185,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2196,7 +2211,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2221,7 +2237,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2246,7 +2263,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2271,7 +2289,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2296,7 +2315,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2321,7 +2341,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2346,7 +2367,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2371,7 +2393,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2396,7 +2419,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2421,7 +2445,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2446,7 +2471,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2471,7 +2497,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2496,7 +2523,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2521,7 +2549,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2546,7 +2575,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2571,7 +2601,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2596,7 +2627,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2621,7 +2653,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2646,7 +2679,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2671,7 +2705,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2696,7 +2731,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2721,7 +2757,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2746,7 +2783,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2771,7 +2809,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2796,7 +2835,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2821,7 +2861,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2846,7 +2887,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2871,7 +2913,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -2896,7 +2939,8 @@
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3421,7 +3465,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3435,7 +3480,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3460,7 +3506,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3474,7 +3521,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3499,7 +3547,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3513,7 +3562,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3538,7 +3588,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3552,7 +3603,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3577,7 +3629,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3591,7 +3644,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3616,7 +3670,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3630,7 +3685,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3655,7 +3711,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3669,7 +3726,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3694,7 +3752,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3708,7 +3767,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3733,7 +3793,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3747,7 +3808,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3772,7 +3834,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3786,7 +3849,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3811,7 +3875,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3825,7 +3890,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3850,7 +3916,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3864,7 +3931,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3889,7 +3957,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3903,7 +3972,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3928,7 +3998,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3942,7 +4013,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3967,7 +4039,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -3981,7 +4054,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -4006,7 +4080,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -4020,7 +4095,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -4045,7 +4121,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -4059,7 +4136,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -4084,7 +4162,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -4098,7 +4177,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -4123,7 +4203,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -4137,7 +4218,8 @@
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -4931,7 +5013,8 @@
         "headers": {
           "Host": "rayan63-1tjy5eqc-v1.rayan-63.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -4945,7 +5028,8 @@
         "headers": {
           "Host": "rayan63-1tjy5eqc-v1.rayan-63.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -4959,7 +5043,8 @@
         "headers": {
           "Host": "rayan63-1tjy5eqc-v1.rayan-63.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -4973,7 +5058,8 @@
         "headers": {
           "Host": "rayan63-1tjy5eqc-v1.rayan-63.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -4987,7 +5073,8 @@
         "headers": {
           "Host": "rayan63-1tjy5eqc-v1.rayan-63.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -5001,7 +5088,8 @@
         "headers": {
           "Host": "rayan63-1tjy5eqc-v1.rayan-63.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -5015,7 +5103,8 @@
         "headers": {
           "Host": "rayan63-1tjy5eqc-v1.rayan-63.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -5037,7 +5126,8 @@
         "headers": {
           "Host": "rayan63-1tjy5eqc-v1.rayan-63.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -5059,7 +5149,8 @@
         "headers": {
           "Host": "rayan63-1tjy5eqc-v1.rayan-63.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -5081,7 +5172,8 @@
         "headers": {
           "Host": "rayan63-1tjy5eqc-v1.rayan-63.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -5103,7 +5195,8 @@
         "headers": {
           "Host": "rayan63-1tjy5eqc-v1.rayan-63.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -5125,7 +5218,8 @@
         "headers": {
           "Host": "rayan63-1tjy5eqc-v1.rayan-63.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -5147,7 +5241,8 @@
         "headers": {
           "Host": "rayan63-1tjy5eqc-v1.rayan-63.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
       "type": "vless",
@@ -5505,85 +5600,55 @@
   "route": {
     "rules": [
       {
-        "inbound": [
-          "tun-in",
-          "mixed-in"
-        ],
-        "action": "resolve",
-        "strategy": "prefer_ipv4"
+        "ip_cidr": "172.19.0.2",
+        "action": "hijack-dns"
       },
       {
-        "inbound": [
-          "tun-in",
-          "mixed-in"
-        ],
-        "action": "sniff",
-        "timeout": "1s"
+        "clash_mode": "Direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "Global",
+        "outbound": "✅ Select"
+      },
+      {
+        "action": "sniff"
       },
       {
         "protocol": "dns",
-        "action": "reject"
+        "action": "hijack-dns"
       },
       {
-        "rule_set": [
-          "geosite-ir",
-          "geoip-ir",
-          "geosite-private"
-        ],
+        "ip_is_private": true,
         "outbound": "direct"
+      },
+      {
+        "network": "udp",
+        "action": "reject"
       }
     ],
-    "rule_set": [
-      {
-        "type": "remote",
-        "tag": "geosite-ir",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-ir.srs",
-        "download_detour": "proxy",
-        "update_interval": "1d"
-      },
-      {
-        "type": "remote",
-        "tag": "geoip-ir",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-ir.srs",
-        "download_detour": "proxy",
-        "update_interval": "1d"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-private",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-private.srs",
-        "download_detour": "proxy",
-        "update_interval": "1d"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-ads",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs",
-        "download_detour": "proxy",
-        "update_interval": "1d"
-      }
-    ],
-    "final": "proxy",
-    "auto_detect_interface": true
+    "auto_detect_interface": true,
+    "final": "✅ Select"
   },
-  "services": [],
+  "ntp": {
+    "enabled": true,
+    "server": "time.cloudflare.com",
+    "server_port": 123,
+    "domain_resolver": "dns-direct",
+    "interval": "30m",
+    "write_to_system": false
+  },
   "experimental": {
     "cache_file": {
       "enabled": true,
-      "path": "cache.db",
-      "store_fakeip": true,
-      "store_rdrc": true
+      "store_fakeip": true
     },
     "clash_api": {
       "external_controller": "127.0.0.1:9090",
       "external_ui": "ui",
+      "default_mode": "Rule",
       "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
-      "external_ui_download_detour": "proxy",
-      "default_mode": "rule"
+      "external_ui_download_detour": "direct"
     }
   }
 }
