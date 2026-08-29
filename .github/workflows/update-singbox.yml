@@ -24,24 +24,19 @@ jobs:
           SUB_LINK: ${{ secrets.SUB_LINK }}
         run: |
           python converter.py
-      - name: بررسی وجود فایل خروجی
+      - name: نمایش لیست فایل‌ها
         run: |
-          if [ -f "javidbox.json" ]; then
-            echo "✅ فایل javidbox.json وجود دارد"
-            ls -la javidbox.json
-          else
-            echo "❌ فایل javidbox.json پیدا نشد!"
-            exit 1
-          fi
+          echo "📂 لیست فایل‌های موجود:"
+          ls -la
       - name: ارسال تغییرات
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add javidbox.json
+          git add javidbox javidbox.json
           if git diff --staged --quiet; then
-            echo "ℹ️ هیچ تغییری در فایل وجود ندارد."
+            echo "ℹ️ هیچ تغییری در فایل‌ها وجود ندارد."
           else
-            git commit -m "به‌روزرسانی خودکار javidbox.json"
+            git commit -m "به‌روزرسانی خودکار javidbox و javidbox.json"
             git push
             echo "✅ تغییرات با موفقیت ارسال شد."
           fi
