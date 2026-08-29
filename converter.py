@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Sing-Box Subscription Converter (v10 - Fix duplicate tags definitively)
+Sing-Box Subscription Converter (v11 - Fix detour proxy)
 Supports: VLESS, VMess, Shadowsocks, Trojan, Hysteria2, TUIC
 """
 
@@ -266,7 +266,6 @@ def deduplicate_servers(servers: list) -> list:
     unique_servers = []
     
     for s in servers:
-        # کلید محتوا برای حذف سرورهای واقعاً تکراری
         content_key = f"{s.get('type', '')}-{s.get('server', '')}-{s.get('server_port', '')}"
         
         if s.get('type') == 'vless':
@@ -277,12 +276,10 @@ def deduplicate_servers(servers: list) -> list:
         elif s.get('type') == 'tuic':
             content_key += f"-{s.get('uuid', '')}-{s.get('password', '')}"
         
-        # اگه محتوا تکراریه، رد کن
         if content_key in seen_content:
             continue
         seen_content.add(content_key)
         
-        # اگه تگ تکراریه، شماره اضافه کن
         original_tag = s.get('tag', '')
         tag = original_tag
         counter = 2
@@ -298,10 +295,7 @@ def deduplicate_servers(servers: list) -> list:
 
 
 def ensure_unique_tags(outbounds: list) -> list:
-    """
-    Guarantee that all outbound tags are unique by adding numeric suffixes
-    to duplicates. This is a final safety net.
-    """
+    """Ensure all outbound tags are unique by adding numeric suffixes."""
     used_tags = set()
     for outbound in outbounds:
         if 'tag' not in outbound:
@@ -320,9 +314,10 @@ def ensure_unique_tags(outbounds: list) -> list:
 def build_config(servers: list) -> dict:
     server_tags = [s['tag'] for s in servers]
     
+    # تغییر تگ‌ها به مقادیر ساده و قابل ارجاع
     urltest = {
         "type": "urltest",
-        "tag": "⚡ Auto Best",
+        "tag": "urltest",
         "outbounds": server_tags,
         "url": "https://www.gstatic.com/generate_204",
         "interval": "5m",
@@ -331,9 +326,9 @@ def build_config(servers: list) -> dict:
     
     selector = {
         "type": "selector",
-        "tag": "🎯 Proxy",
-        "outbounds": ["⚡ Auto Best", "direct"] + server_tags,
-        "default": "⚡ Auto Best",
+        "tag": "proxy",  # این تگ برای ارجاع در DNS و route استفاده می‌شود
+        "outbounds": ["urltest", "direct"] + server_tags,
+        "default": "urltest",
     }
     
     outbounds = [selector, urltest] + servers + [
@@ -341,7 +336,7 @@ def build_config(servers: list) -> dict:
         {"type": "block", "tag": "block"},
     ]
     
-    # یکتا‌سازی نهایی تمام تگ‌ها (شامل سرورها، سلکتور، یوآر‌ال‌تست و …)
+    # یکتا‌سازی نهایی
     outbounds = ensure_unique_tags(outbounds)
     
     config = {
@@ -412,24 +407,29 @@ def build_config(servers: list) -> dict:
                 {
                     "type": "remote", "tag": "geosite-ir", "format": "binary",
                     "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-ir.srs",
-                    "download_detour": "proxy", "update_interval": "1d",
+                    "download_detour": "proxy",
+                    "update_interval": "1d",
                 },
                 {
                     "type": "remote", "tag": "geoip-ir", "format": "binary",
                     "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-ir.srs",
-                    "download_detour": "proxy", "update_interval": "1d",
+                    "download_detour": "proxy",
+                    "update_interval": "1d",
                 },
                 {
                     "type": "remote", "tag": "geosite-private", "format": "binary",
                     "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-private.srs",
-                    "download_detour": "proxy", "update_interval": "1d",
+                    "download_detour": "proxy",
+                    "update_interval": "1d",
                 },
                 {
                     "type": "remote", "tag": "geosite-ads", "format": "binary",
                     "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs",
-                    "download_detour": "proxy", "update_interval": "1d",
+                    "download_detour": "proxy",
+                    "update_interval": "1d",
                 },
             ],
+            "final": "proxy",  # استفاده از تگ selector
             "auto_detect_interface": True,
         },
         "services": [],
