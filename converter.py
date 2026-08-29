@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Sing-Box Subscription Converter (v7 - Final stable version)
+Sing-Box Subscription Converter (v8 - Fully compatible with 1.14+)
 Supports: VLESS, VMess, Shadowsocks, Trojan, Hysteria2, TUIC
 Features: URLTest for best ping, Modern DNS (1.14+), Rule Actions (1.11+)
 """
@@ -299,13 +299,13 @@ def build_config(servers: list) -> dict:
         "default": "⚡ Auto Best",
     }
     
+    # ✅ DNS outbound حذف شد - فقط direct و block
     outbounds = [
         selector,
         urltest,
     ] + servers + [
         {"type": "direct", "tag": "direct"},
         {"type": "block", "tag": "block"},
-        {"type": "dns", "tag": "dns-out"},
     ]
     
     config = {
@@ -363,7 +363,11 @@ def build_config(servers: list) -> dict:
                     "action": "sniff",
                     "timeout": "1s",
                 },
-                {"protocol": "dns", "outbound": "dns-out"},
+                # ✅ DNS protocol rule با action: "reject" به جای outbound
+                {
+                    "protocol": "dns",
+                    "action": "reject",
+                },
                 {
                     "rule_set": ["geosite-ir", "geoip-ir", "geosite-private"],
                     "outbound": "direct",
