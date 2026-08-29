@@ -79,9 +79,9 @@
   "outbounds": [
     {
       "type": "selector",
-      "tag": "🎯 Proxy",
+      "tag": "proxy",
       "outbounds": [
-        "⚡ Auto Best",
+        "urltest",
         "direct",
         "Domain1-TLS",
         "Domain1-TCP",
@@ -321,11 +321,11 @@
         "CF官方优选15",
         "CF官方优选16"
       ],
-      "default": "⚡ Auto Best"
+      "default": "urltest"
     },
     {
       "type": "urltest",
-      "tag": "⚡ Auto Best",
+      "tag": "urltest",
       "outbounds": [
         "Domain1-TLS",
         "Domain1-TCP",
@@ -5567,6 +5567,7 @@
         "update_interval": "1d"
       }
     ],
+    "final": "proxy",
     "auto_detect_interface": true
   },
   "services": [],
