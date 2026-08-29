@@ -1025,14 +1025,18 @@ def main():
 
     singbox_json = generate_singbox_config(proxies, mode='tun')
 
-    output_file = "javidbox.json"
-    with open(output_file, "w", encoding="utf-8") as f:
+    # ===== تولید هر دو فایل =====
+    with open("javidbox", "w", encoding="utf-8") as f:
+        f.write(singbox_json)
+    
+    with open("javidbox.json", "w", encoding="utf-8") as f:
         f.write(singbox_json)
 
-    print(f"✅ فایل {output_file} با موفقیت تولید شد.")
+    print(f"✅ فایل‌های javidbox و javidbox.json با موفقیت تولید شدند.")
     print(f"📊 تعداد نودهای موجود در خروجی: {len(proxies)}")
 
-    with open(output_file, "r", encoding="utf-8") as f:
+    # نمایش پیش‌نمایش فایل
+    with open("javidbox.json", "r", encoding="utf-8") as f:
         preview = f.read(200)
         print(f"📄 پیش‌نمایش فایل (۲۰۰ کاراکتر اول):\n{preview}...")
 
