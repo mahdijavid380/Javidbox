@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Sing-Box Subscription Converter (v12 - Fix direct outbound detour)
+Sing-Box Subscription Converter (v13 - Fix direct outbound order)
 Supports: VLESS, VMess, Shadowsocks, Trojan, Hysteria2, TUIC
 """
 
@@ -305,7 +305,6 @@ def ensure_unique_tags(outbounds: list) -> list:
         if 'tag' not in outbound:
             continue
         tag = outbound['tag']
-        # اگر تگ محافظت‌شده باشد، بدون تغییر می‌ماند
         if tag in protected_tags:
             used_tags.add(tag)
             continue
@@ -321,12 +320,6 @@ def ensure_unique_tags(outbounds: list) -> list:
 
 def build_config(servers: list) -> dict:
     server_tags = [s['tag'] for s in servers]
-    
-    # تعریف outbound‌های ثابت در ابتدا
-    fixed_outbounds = [
-        {"type": "direct", "tag": "direct"},
-        {"type": "block", "tag": "block"},
-    ]
     
     selector = {
         "type": "selector",
@@ -344,8 +337,13 @@ def build_config(servers: list) -> dict:
         "tolerance": 50,
     }
     
-    # ترکیب همه outbound‌ها: ابتدا ثابت‌ها، سپس سلکتور و یوآر‌ال‌تست، سپس سرورها
-    outbounds = fixed_outbounds + [selector, urltest] + servers
+    # ترتیب مهم: ابتدا direct و block، سپس selector و urltest، سپس سرورها
+    outbounds = [
+        {"type": "direct", "tag": "direct"},
+        {"type": "block", "tag": "block"},
+        selector,
+        urltest,
+    ] + servers
     
     # یکتا‌سازی (تگ‌های محافظت‌شده تغییر نمی‌کنند)
     outbounds = ensure_unique_tags(outbounds)
