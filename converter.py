@@ -5,6 +5,7 @@ import urllib.request
 import base64
 import re
 from urllib.parse import urlparse, parse_qs, unquote
+from datetime import datetime
 
 # ===========================================================================
 # 1. Base64 helpers with validation
@@ -375,7 +376,7 @@ def parse_telegram(link: str):
         return None
 
 # ===========================================================================
-# 3. Define PARSERS list and parse_proxy_link
+# 3. PARSERS list and parse_proxy_link
 # ===========================================================================
 PARSERS = [
     parse_vless,
@@ -401,7 +402,7 @@ def parse_proxy_link(link: str):
     return None
 
 # ===========================================================================
-# 4. Parse multiple lines (links) with deduplication
+# 4. Parse multiple lines (links)
 # ===========================================================================
 def parse_multiple_proxies(text: str):
     lines = text.splitlines()
@@ -486,11 +487,12 @@ def parse_singbox(text: str):
         return [], [f'JSON معتبر نیست: {e}']
 
 def singbox_to_proxy_node(ob, internal_type):
+    server = str(ob.get('server', ''))
     base = {
         'name': ob.get('tag', ob.get('name', 'unnamed')),
         'type': internal_type,
-        'server': ob.get('server', ''),
-        'port': ob.get('server_port', ob.get('port', 0))
+        'server': server,
+        'port': int(ob.get('server_port', ob.get('port', 0)))
     }
     if not base['server'] or base['port'] == 0:
         return None
@@ -627,7 +629,7 @@ class SSAdapter:
         return {
             "tag": node['name'],
             "type": "shadowsocks",
-            "server": node['server'],
+            "server": str(node.get('server', '')),
             "server_port": node['port'],
             "method": node.get('cipher', 'aes-128-gcm'),
             "password": node.get('password', '')
@@ -639,7 +641,7 @@ class SSRAdapter:
         return {
             "tag": node['name'],
             "type": "shadowsocks",
-            "server": node['server'],
+            "server": str(node.get('server', '')),
             "server_port": node['port'],
             "method": node.get('cipher', 'aes-128-gcm'),
             "password": node.get('password', '')
@@ -648,10 +650,11 @@ class SSRAdapter:
 class VmessAdapter:
     @staticmethod
     def to_singbox(node):
+        server = str(node.get('server', ''))
         out = {
             "tag": node['name'],
             "type": "vmess",
-            "server": node['server'],
+            "server": server,
             "server_port": node['port'],
             "uuid": node.get('uuid', ''),
             "packet_encoding": "xudp",
@@ -680,10 +683,11 @@ class VmessAdapter:
 class VlessAdapter:
     @staticmethod
     def to_singbox(node):
+        server = str(node.get('server', ''))
         out = {
             "tag": node['name'],
             "type": "vless",
-            "server": node['server'],
+            "server": server,
             "server_port": node['port'],
             "uuid": node.get('uuid', '')
         }
@@ -715,17 +719,18 @@ class VlessAdapter:
                 "type": "grpc",
                 "service_name": node['grpc-opts'].get('grpc-service-name', '')
             }
-        if not re.match(r'^[\d.]+$', node['server']) and not node['server'].startswith('['):
+        if server and not re.match(r'^[\d.]+$', server) and not server.startswith('['):
             out["domain_resolver"] = "dns-direct"
         return out
 
 class TrojanAdapter:
     @staticmethod
     def to_singbox(node):
+        server = str(node.get('server', ''))
         out = {
             "tag": node['name'],
             "type": "trojan",
-            "server": node['server'],
+            "server": server,
             "server_port": node['port'],
             "password": node.get('password', ''),
             "tls": {
@@ -743,7 +748,7 @@ class TrojanAdapter:
                 "path": node['ws-opts'].get('path', '/'),
                 "headers": node['ws-opts'].get('headers')
             }
-        if not re.match(r'^[\d.]+$', node['server']) and not node['server'].startswith('['):
+        if server and not re.match(r'^[\d.]+$', server) and not server.startswith('['):
             out["domain_resolver"] = "dns-direct"
         return out
 
@@ -753,7 +758,7 @@ class HysteriaAdapter:
         return {
             "tag": node['name'],
             "type": "hysteria",
-            "server": node['server'],
+            "server": str(node.get('server', '')),
             "server_port": node['port'],
             "auth": node.get('auth_str', ''),
             "up_mbps": node.get('up', 10),
@@ -764,10 +769,11 @@ class HysteriaAdapter:
 class Hysteria2Adapter:
     @staticmethod
     def to_singbox(node):
+        server = str(node.get('server', ''))
         out = {
             "tag": node['name'],
             "type": "hysteria2",
-            "server": node['server'],
+            "server": server,
             "server_port": node['port'],
             "password": node.get('password', ''),
             "tls": {"enabled": True}
@@ -789,7 +795,7 @@ class HttpAdapter:
         return {
             "tag": node['name'],
             "type": "http",
-            "server": node['server'],
+            "server": str(node.get('server', '')),
             "server_port": node['port'],
             "users": [{"username": node.get('username', ''), "password": node.get('password', '')}]
         }
@@ -800,7 +806,7 @@ class Socks5Adapter:
         return {
             "tag": node['name'],
             "type": "socks",
-            "server": node['server'],
+            "server": str(node.get('server', '')),
             "server_port": node['port'],
             "version": "5",
             "username": node.get('username', ''),
@@ -829,20 +835,30 @@ def generate_singbox_config(proxies, mode='tun'):
         return json.dumps({"error": "هیچ نودی پیدا نشد"}, indent=2, ensure_ascii=False)
 
     supported_types = {'ss', 'vmess', 'vless', 'trojan', 'hysteria', 'hysteria2', 'http', 'socks5'}
-    proxies = [p for p in proxies if p.get('type') in supported_types]
+    
+    filtered_proxies = []
+    for p in proxies:
+        if p.get('type') in supported_types:
+            filtered_proxies.append(p)
+        else:
+            print(f"⚠️ پروتکل {p.get('type')} پشتیبانی نمی‌شود و حذف شد: {p.get('name', 'unnamed')}")
 
-    if not proxies:
+    if not filtered_proxies:
         return json.dumps({"error": "هیچ نود پشتیبانی‌شده‌ای برای Sing-box یافت نشد"}, indent=2, ensure_ascii=False)
 
-    proxy_names = [p['name'] for p in proxies]
+    proxy_names = [p['name'] for p in filtered_proxies]
 
     outbounds = []
-    for p in proxies:
+    for p in filtered_proxies:
         adapter = get_adapter(p['type'])
         if adapter:
-            outbound = adapter.to_singbox(p)
-            if outbound:
-                outbounds.append(outbound)
+            try:
+                outbound = adapter.to_singbox(p)
+                if outbound:
+                    outbounds.append(outbound)
+            except Exception as e:
+                print(f"⚠️ خطا در تبدیل {p.get('name', 'unnamed')}: {e}")
+                continue
 
     selector_tag = "✅  Select"
 
@@ -1009,10 +1025,16 @@ def main():
 
     singbox_json = generate_singbox_config(proxies, mode='tun')
 
-    with open("javidbox", "w", encoding="utf-8") as f:
+    output_file = "javidbox.json"
+    with open(output_file, "w", encoding="utf-8") as f:
         f.write(singbox_json)
 
-    print("✅ فایل javidbox با موفقیت تولید شد.")
+    print(f"✅ فایل {output_file} با موفقیت تولید شد.")
+    print(f"📊 تعداد نودهای موجود در خروجی: {len(proxies)}")
+
+    with open(output_file, "r", encoding="utf-8") as f:
+        preview = f.read(200)
+        print(f"📄 پیش‌نمایش فایل (۲۰۰ کاراکتر اول):\n{preview}...")
 
 if __name__ == "__main__":
     main()
