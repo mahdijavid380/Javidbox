@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """
-Sing-Box Subscription Converter (v8 - Fully compatible with 1.14+)
+Sing-Box Subscription Converter (v9 - Fix duplicate tags)
 Supports: VLESS, VMess, Shadowsocks, Trojan, Hysteria2, TUIC
-Features: URLTest for best ping, Modern DNS (1.14+), Rule Actions (1.11+)
 """
 
 import base64
@@ -261,27 +260,46 @@ def parse_line(line: str):
 
 
 def deduplicate_servers(servers: list) -> list:
-    seen = set()
-    unique = []
+    """Remove duplicate servers and ensure unique tags."""
+    seen_content = set()
+    seen_tags = set()
+    unique_servers = []
     
     for s in servers:
-        key = f"{s.get('type', '')}-{s.get('server', '')}-{s.get('server_port', '')}"
-        if s.get('type') == 'vless': key += f"-{s.get('uuid', '')}"
-        elif s.get('type') in ('vmess', 'shadowsocks', 'trojan', 'hysteria2'):
-            key += f"-{s.get('password', '') or s.get('uuid', '')}"
-        elif s.get('type') == 'tuic': key += f"-{s.get('uuid', '')}-{s.get('password', '')}"
+        # کلید محتوا برای حذف سرورهای واقعاً تکراری
+        content_key = f"{s.get('type', '')}-{s.get('server', '')}-{s.get('server_port', '')}"
         
-        if key not in seen:
-            seen.add(key)
-            unique.append(s)
+        if s.get('type') == 'vless':
+            transport_path = s.get('transport', {}).get('path', '')
+            content_key += f"-{s.get('uuid', '')}-{transport_path}"
+        elif s.get('type') in ('vmess', 'shadowsocks', 'trojan', 'hysteria2'):
+            content_key += f"-{s.get('password', '') or s.get('uuid', '')}"
+        elif s.get('type') == 'tuic':
+            content_key += f"-{s.get('uuid', '')}-{s.get('password', '')}"
+        
+        # اگه محتوا تکراریه، رد کن
+        if content_key in seen_content:
+            continue
+        seen_content.add(content_key)
+        
+        # اگه تگ تکراریه، شماره اضافه کن
+        original_tag = s.get('tag', '')
+        tag = original_tag
+        counter = 2
+        while tag in seen_tags:
+            tag = f"{original_tag}-{counter}"
+            counter += 1
+        
+        s['tag'] = tag
+        seen_tags.add(tag)
+        unique_servers.append(s)
     
-    return unique
+    return unique_servers
 
 
 def build_config(servers: list) -> dict:
     server_tags = [s['tag'] for s in servers]
     
-    # ⚡ URLTest: انتخاب خودکار بهترین سرور با کمترین ping
     urltest = {
         "type": "urltest",
         "tag": "⚡ Auto Best",
@@ -291,7 +309,6 @@ def build_config(servers: list) -> dict:
         "tolerance": 50,
     }
     
-    # 🎯 Selector: انتخاب دستی یا خودکار
     selector = {
         "type": "selector",
         "tag": "🎯 Proxy",
@@ -299,11 +316,7 @@ def build_config(servers: list) -> dict:
         "default": "⚡ Auto Best",
     }
     
-    # ✅ DNS outbound حذف شد - فقط direct و block
-    outbounds = [
-        selector,
-        urltest,
-    ] + servers + [
+    outbounds = [selector, urltest] + servers + [
         {"type": "direct", "tag": "direct"},
         {"type": "block", "tag": "block"},
     ]
@@ -363,7 +376,6 @@ def build_config(servers: list) -> dict:
                     "action": "sniff",
                     "timeout": "1s",
                 },
-                # ✅ DNS protocol rule با action: "reject" به جای outbound
                 {
                     "protocol": "dns",
                     "action": "reject",
