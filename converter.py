@@ -1,42 +1,32 @@
 #!/usr/bin/env python3
-"""
-Javidbox - Subscription to Sing-Box Config Converter
-تبدیل لینک اشتراک به کانفیگ Sing-Box با ساختار مشخص
-"""
+# -*- coding: utf-8 -*-
 
 import os
 import sys
 import base64
 import json
 import urllib.parse
-import re
 from typing import Dict, List, Any, Optional
 
 # ==============================
-# پارسرهای پروتکل‌ها
+# پارسرهای پروتکل
 # ==============================
 
 def parse_vless(uri: str) -> Optional[Dict[str, Any]]:
-    """پارس URI با پروتکل vless"""
     if not uri.startswith('vless://'):
         return None
-    # حذف پروتکل
     uri = uri[8:]
-    # جدا کردن بخش remark (بعد از #)
     if '#' in uri:
         uri, remark = uri.split('#', 1)
         remark = urllib.parse.unquote(remark)
     else:
         remark = ''
-    # جدا کردن userinfo و host/port و params
     if '@' not in uri:
         return None
     userinfo, rest = uri.split('@', 1)
-    # rest شامل host:port?params
     if '?' in rest:
         host_port, params_str = rest.split('?', 1)
         params = urllib.parse.parse_qs(params_str)
-        # params values are lists, take first
         params = {k: v[0] for k, v in params.items()}
     else:
         host_port = rest
@@ -49,32 +39,25 @@ def parse_vless(uri: str) -> Optional[Dict[str, Any]]:
     except ValueError:
         port = 443
 
-    uuid = userinfo
-    # استخراج پارامترها
-    security = params.get('security', '')
-    sni = params.get('sni', '')
-    host = params.get('host', '')
-    path = params.get('path', '/')
-    type_ = params.get('type', 'ws')  # معمولاً ws
-
-    # ساخت outbound
     outbound = {
         "tag": remark if remark else f"{server}_{port}",
         "type": "vless",
         "server": server,
         "server_port": port,
-        "uuid": uuid,
+        "uuid": userinfo,
         "transport": {
-            "type": type_,
-            "path": path,
+            "type": params.get('type', 'ws'),
+            "path": params.get('path', '/'),
             "headers": {
-                "Host": host or server
+                "Host": params.get('host', server)
             }
         },
         "domain_resolver": "dns-direct"
     }
 
-    # اگر TLS فعال باشد
+    security = params.get('security', '')
+    sni = params.get('sni', '')
+    host = params.get('host', '')
     if security and security.lower() in ['tls', 'reality']:
         outbound["tls"] = {
             "enabled": True,
@@ -88,17 +71,15 @@ def parse_vless(uri: str) -> Optional[Dict[str, Any]]:
 
 
 def parse_vmess(uri: str) -> Optional[Dict[str, Any]]:
-    """پارس URI با پروتکل vmess (base64 json)"""
     if not uri.startswith('vmess://'):
         return None
     b64 = uri[8:]
-    # ممکن است padding نیاز داشته باشد
     b64 += '=' * (4 - len(b64) % 4)
     try:
         data = json.loads(base64.b64decode(b64).decode('utf-8'))
     except Exception:
         return None
-    # ساخت outbound
+
     outbound = {
         "tag": data.get('ps', f"{data.get('add', '')}_{data.get('port', 0)}"),
         "type": "vmess",
@@ -115,7 +96,6 @@ def parse_vmess(uri: str) -> Optional[Dict[str, Any]]:
         },
         "domain_resolver": "dns-direct"
     }
-    # TLS
     if data.get('tls', '') == 'tls':
         outbound["tls"] = {
             "enabled": True,
@@ -129,13 +109,8 @@ def parse_vmess(uri: str) -> Optional[Dict[str, Any]]:
 
 
 def parse_ss(uri: str) -> Optional[Dict[str, Any]]:
-    """پارس URI با پروتکل Shadowsocks"""
     if not uri.startswith('ss://'):
         return None
-    # فرمت‌های مختلف: ss://base64@server:port#remark  یا ss://base64?params#remark
-    # ساده‌ترین: ss://method:password@server:port#remark
-    # برخی از uri ها کل قسمت بعد از ss:// را base64 می‌کنند.
-    # برای سادگی، فقط فرمت ساده را پشتیبانی می‌کنیم.
     uri = uri[5:]
     if '#' in uri:
         uri, remark = uri.split('#', 1)
@@ -145,13 +120,10 @@ def parse_ss(uri: str) -> Optional[Dict[str, Any]]:
     if '@' not in uri:
         return None
     userinfo, host_port = uri.split('@', 1)
-    # userinfo ممکن است base64 باشد یا plain
     try:
-        # decode base64
         decoded = base64.b64decode(userinfo + '=' * (4 - len(userinfo) % 4)).decode('utf-8')
         method, password = decoded.split(':', 1)
     except Exception:
-        # فرض می‌کنیم plain است
         if ':' not in userinfo:
             return None
         method, password = userinfo.split(':', 1)
@@ -163,7 +135,7 @@ def parse_ss(uri: str) -> Optional[Dict[str, Any]]:
     except ValueError:
         port = 1080
 
-    outbound = {
+    return {
         "tag": remark if remark else f"{server}_{port}",
         "type": "shadowsocks",
         "server": server,
@@ -172,11 +144,9 @@ def parse_ss(uri: str) -> Optional[Dict[str, Any]]:
         "password": password,
         "domain_resolver": "dns-direct"
     }
-    return outbound
 
 
 def parse_trojan(uri: str) -> Optional[Dict[str, Any]]:
-    """پارس URI با پروتکل Trojan"""
     if not uri.startswith('trojan://'):
         return None
     uri = uri[9:]
@@ -202,19 +172,16 @@ def parse_trojan(uri: str) -> Optional[Dict[str, Any]]:
         port = int(port_str)
     except ValueError:
         port = 443
-    password = userinfo
-    sni = params.get('sni', '')
-    host = params.get('host', '')
 
     outbound = {
         "tag": remark if remark else f"{server}_{port}",
         "type": "trojan",
         "server": server,
         "server_port": port,
-        "password": password,
+        "password": userinfo,
         "tls": {
             "enabled": True,
-            "server_name": sni or host or server,
+            "server_name": params.get('sni', params.get('host', server)),
             "utls": {
                 "enabled": True,
                 "fingerprint": "chrome"
@@ -224,7 +191,7 @@ def parse_trojan(uri: str) -> Optional[Dict[str, Any]]:
             "type": "ws",
             "path": params.get('path', '/'),
             "headers": {
-                "Host": host or server
+                "Host": params.get('host', server)
             }
         },
         "domain_resolver": "dns-direct"
@@ -233,10 +200,8 @@ def parse_trojan(uri: str) -> Optional[Dict[str, Any]]:
 
 
 def parse_hysteria2(uri: str) -> Optional[Dict[str, Any]]:
-    """پارس URI با پروتکل Hysteria2"""
     if not uri.startswith('hysteria2://'):
         return None
-    # مشابه vless
     uri = uri[11:]
     if '#' in uri:
         uri, remark = uri.split('#', 1)
@@ -260,14 +225,13 @@ def parse_hysteria2(uri: str) -> Optional[Dict[str, Any]]:
         port = int(port_str)
     except ValueError:
         port = 443
-    auth = userinfo  # معمولاً به شکل "" یا base64
 
     outbound = {
         "tag": remark if remark else f"{server}_{port}",
         "type": "hysteria2",
         "server": server,
         "server_port": port,
-        "password": auth,
+        "password": userinfo,
         "tls": {
             "enabled": True,
             "server_name": params.get('sni', server),
@@ -276,16 +240,13 @@ def parse_hysteria2(uri: str) -> Optional[Dict[str, Any]]:
                 "fingerprint": "chrome"
             }
         },
-        "transport": {
-            "type": "udp"
-        },
+        "transport": {"type": "udp"},
         "domain_resolver": "dns-direct"
     }
     return outbound
 
 
 def parse_tuic(uri: str) -> Optional[Dict[str, Any]]:
-    """پارس URI با پروتکل TUIC"""
     if not uri.startswith('tuic://'):
         return None
     uri = uri[7:]
@@ -311,14 +272,13 @@ def parse_tuic(uri: str) -> Optional[Dict[str, Any]]:
         port = int(port_str)
     except ValueError:
         port = 443
-    uuid = userinfo
 
     outbound = {
         "tag": remark if remark else f"{server}_{port}",
         "type": "tuic",
         "server": server,
         "server_port": port,
-        "uuid": uuid,
+        "uuid": userinfo,
         "tls": {
             "enabled": True,
             "server_name": params.get('sni', server),
@@ -332,10 +292,6 @@ def parse_tuic(uri: str) -> Optional[Dict[str, Any]]:
     return outbound
 
 
-# ==============================
-# تابع اصلی پردازش
-# ==============================
-
 PARSERS = [
     parse_vless,
     parse_vmess,
@@ -345,11 +301,10 @@ PARSERS = [
     parse_tuic,
 ]
 
+
 def parse_subscription(content: str) -> List[Dict[str, Any]]:
-    """دریافت محتوای دیکود شده اشتراک و استخراج گره‌ها"""
     outbounds = []
-    lines = content.strip().splitlines()
-    for line in lines:
+    for line in content.strip().splitlines():
         line = line.strip()
         if not line:
             continue
@@ -363,12 +318,10 @@ def parse_subscription(content: str) -> List[Dict[str, Any]]:
     return outbounds
 
 
-def build_config(outbounds: List[Dict[str, Any]]) -> Dict[str, Any]:
-    """ساختار نهایی کانفیگ با بخش‌های ثابت"""
-    # لیست تگ‌های همه گره‌ها
-    tags = [ob['tag'] for ob in outbounds]
+def build_config(nodes: List[Dict[str, Any]]) -> Dict[str, Any]:
+    tags = [node['tag'] for node in nodes]
 
-    # ساختار ثابت
+    # ساختار ثابت، دقیقاً مشابه config.json
     config = {
         "log": {
             "disabled": False,
@@ -390,14 +343,8 @@ def build_config(outbounds: List[Dict[str, Any]]) -> Dict[str, Any]:
                 }
             ],
             "rules": [
-                {
-                    "clash_mode": "Direct",
-                    "server": "dns-direct"
-                },
-                {
-                    "clash_mode": "Global",
-                    "server": "dns-remote"
-                }
+                {"clash_mode": "Direct", "server": "dns-direct"},
+                {"clash_mode": "Global", "server": "dns-remote"}
             ],
             "strategy": "prefer_ipv4"
         },
@@ -428,7 +375,7 @@ def build_config(outbounds: List[Dict[str, Any]]) -> Dict[str, Any]:
             {
                 "type": "selector",
                 "tag": "✅  Select",
-                "outbounds": tags.copy(),
+                "outbounds": ["Best Ping 🚀"] + tags,
                 "interrupt_exist_connections": False
             },
             {
@@ -444,37 +391,17 @@ def build_config(outbounds: List[Dict[str, Any]]) -> Dict[str, Any]:
                 "tag": "direct",
                 "domain_resolver": "dns-direct"
             }
-        ] + outbounds,  # گره‌ها بعد از direct
+        ] + nodes,  # گره‌ها بعد از direct
 
         "route": {
             "rules": [
-                {
-                    "ip_cidr": "172.19.0.2",
-                    "action": "hijack-dns"
-                },
-                {
-                    "clash_mode": "Direct",
-                    "outbound": "direct"
-                },
-                {
-                    "clash_mode": "Global",
-                    "outbound": "✅  Select"
-                },
-                {
-                    "action": "sniff"
-                },
-                {
-                    "protocol": "dns",
-                    "action": "hijack-dns"
-                },
-                {
-                    "ip_is_private": True,
-                    "outbound": "direct"
-                },
-                {
-                    "network": "udp",
-                    "action": "reject"
-                }
+                {"ip_cidr": "172.19.0.2", "action": "hijack-dns"},
+                {"clash_mode": "Direct", "outbound": "direct"},
+                {"clash_mode": "Global", "outbound": "✅  Select"},
+                {"action": "sniff"},
+                {"protocol": "dns", "action": "hijack-dns"},
+                {"ip_is_private": True, "outbound": "direct"},
+                {"network": "udp", "action": "reject"}
             ],
             "auto_detect_interface": True,
             "final": "✅  Select"
@@ -504,51 +431,40 @@ def build_config(outbounds: List[Dict[str, Any]]) -> Dict[str, Any]:
     return config
 
 
-# ==============================
-# اجرای اصلی
-# ==============================
-
 def main():
     sub_link = os.environ.get('SUB_LINK')
     if not sub_link:
         print("ERROR: SUB_LINK environment variable is not set.", file=sys.stderr)
         sys.exit(1)
 
-    # دریافت محتوای اشتراک (با inja requests)
     try:
         import requests
         resp = requests.get(sub_link, timeout=30)
         resp.raise_for_status()
         content = resp.text
     except ImportError:
-        print("ERROR: requests library not installed. Please install it.", file=sys.stderr)
+        print("ERROR: requests library not installed.", file=sys.stderr)
         sys.exit(1)
     except Exception as e:
         print(f"ERROR: Failed to fetch subscription: {e}", file=sys.stderr)
         sys.exit(1)
 
-    # دیکود Base64
+    # دیکود Base64 (اگر محتوا base64 باشد)
     try:
-        # ممکن است محتوا base64 باشد یا plain text
-        # سعی می‌کنیم دیکود کنیم
         decoded = base64.b64decode(content).decode('utf-8')
     except Exception:
-        # اگر دیکود نشد، فرض می‌کنیم خودش plain است
         decoded = content
 
-    # Parse گره‌ها
-    outbounds = parse_subscription(decoded)
-    if not outbounds:
-        print("WARNING: No valid nodes found in subscription.", file=sys.stderr)
+    nodes = parse_subscription(decoded)
+    if not nodes:
+        print("WARNING: No valid nodes found.", file=sys.stderr)
 
-    # ساخت کانفیگ نهایی
-    config = build_config(outbounds)
+    config = build_config(nodes)
 
-    # ذخیره در فایل
     with open('javidbox.json', 'w', encoding='utf-8') as f:
         json.dump(config, f, indent=2, ensure_ascii=False)
 
-    print(f"✅ Successfully generated javidbox.json with {len(outbounds)} nodes.")
+    print(f"✅ Successfully generated javidbox.json with {len(nodes)} nodes.")
 
 
 if __name__ == '__main__':
