@@ -78,6 +78,14 @@
   ],
   "outbounds": [
     {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    },
+    {
       "type": "selector",
       "tag": "proxy",
       "outbounds": [
@@ -5492,14 +5500,6 @@
           "Host": "super-hill-89bc.orenking370-c7e.workers.dev"
         }
       }
-    },
-    {
-      "type": "direct",
-      "tag": "direct"
-    },
-    {
-      "type": "block",
-      "tag": "block"
     }
   ],
   "route": {
