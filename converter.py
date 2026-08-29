@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Sing-Box Subscription Converter (v11 - Fix detour proxy)
+Sing-Box Subscription Converter (v12 - Fix direct outbound detour)
 Supports: VLESS, VMess, Shadowsocks, Trojan, Hysteria2, TUIC
 """
 
@@ -295,13 +295,21 @@ def deduplicate_servers(servers: list) -> list:
 
 
 def ensure_unique_tags(outbounds: list) -> list:
-    """Ensure all outbound tags are unique by adding numeric suffixes."""
+    """
+    Ensure all outbound tags are unique, but preserve fixed tags
+    like 'direct', 'block', 'proxy', 'urltest', etc.
+    """
+    protected_tags = {"direct", "block", "proxy", "urltest"}
     used_tags = set()
     for outbound in outbounds:
         if 'tag' not in outbound:
             continue
-        original_tag = outbound['tag']
-        tag = original_tag
+        tag = outbound['tag']
+        # اگر تگ محافظت‌شده باشد، بدون تغییر می‌ماند
+        if tag in protected_tags:
+            used_tags.add(tag)
+            continue
+        original_tag = tag
         counter = 2
         while tag in used_tags:
             tag = f"{original_tag}-{counter}"
@@ -314,7 +322,19 @@ def ensure_unique_tags(outbounds: list) -> list:
 def build_config(servers: list) -> dict:
     server_tags = [s['tag'] for s in servers]
     
-    # تغییر تگ‌ها به مقادیر ساده و قابل ارجاع
+    # تعریف outbound‌های ثابت در ابتدا
+    fixed_outbounds = [
+        {"type": "direct", "tag": "direct"},
+        {"type": "block", "tag": "block"},
+    ]
+    
+    selector = {
+        "type": "selector",
+        "tag": "proxy",
+        "outbounds": ["urltest", "direct"] + server_tags,
+        "default": "urltest",
+    }
+    
     urltest = {
         "type": "urltest",
         "tag": "urltest",
@@ -324,19 +344,10 @@ def build_config(servers: list) -> dict:
         "tolerance": 50,
     }
     
-    selector = {
-        "type": "selector",
-        "tag": "proxy",  # این تگ برای ارجاع در DNS و route استفاده می‌شود
-        "outbounds": ["urltest", "direct"] + server_tags,
-        "default": "urltest",
-    }
+    # ترکیب همه outbound‌ها: ابتدا ثابت‌ها، سپس سلکتور و یوآر‌ال‌تست، سپس سرورها
+    outbounds = fixed_outbounds + [selector, urltest] + servers
     
-    outbounds = [selector, urltest] + servers + [
-        {"type": "direct", "tag": "direct"},
-        {"type": "block", "tag": "block"},
-    ]
-    
-    # یکتا‌سازی نهایی
+    # یکتا‌سازی (تگ‌های محافظت‌شده تغییر نمی‌کنند)
     outbounds = ensure_unique_tags(outbounds)
     
     config = {
@@ -429,7 +440,7 @@ def build_config(servers: list) -> dict:
                     "update_interval": "1d",
                 },
             ],
-            "final": "proxy",  # استفاده از تگ selector
+            "final": "proxy",
             "auto_detect_interface": True,
         },
         "services": [],
