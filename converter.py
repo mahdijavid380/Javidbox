@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Sing-Box Subscription Converter (v13 - Fix direct outbound order)
+Sing-Box Subscription Converter (v14 - Fix direct outbound order)
 Supports: VLESS, VMess, Shadowsocks, Trojan, Hysteria2, TUIC
 """
 
