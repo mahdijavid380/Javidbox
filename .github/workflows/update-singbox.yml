@@ -2,42 +2,32 @@ name: Update Sing-box Config
 
 on:
   schedule:
-    # هر ۴ ساعت یکبار (زمان UTC)
     - cron: '0 */4 * * *'
-  # همچنین می‌توان با push روی شاخه main نیز اجرا کرد (اختیاری)
   push:
-    branches:
-      - main
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'
-
-    - name: Install dependencies (if any)
-      run: |
-        pip install --upgrade pip
-        # در صورت نیاز به کتابخانه خاصی، اینجا اضافه کنید
-
-    - name: Run converter script
-      env:
-        SUB_LINK: ${{ secrets.SUB_LINK }}
-      run: |
-        python converter.py
-
-    - name: Commit and push if changed
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add javidbox
-        git diff --staged --quiet || git commit -m "Update javidbox from subscription"
-        git push
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: نصب وابستگی‌ها
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml
+      - name: اجرای تبدیل‌کننده
+        env:
+          SUB_LINK: ${{ secrets.SUB_LINK }}
+        run: |
+          python converter.py
+      - name: ارسال تغییرات
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add javidbox
+          git diff --staged --quiet || git commit -m "به‌روزرسانی خودکار javidbox از ساب‌لینک"
+          git push
