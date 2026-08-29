@@ -40,7 +40,7 @@ def base64_encode(s: str) -> str:
         return ''
 
 # ===========================================================================
-# 2. Parsers for proxy links
+# 2. Parsers for proxy links (همه پارسرهای قبلی)
 # ===========================================================================
 def parse_vless(link: str):
     if not link.startswith('vless://'):
@@ -402,7 +402,7 @@ def parse_proxy_link(link: str):
     return None
 
 # ===========================================================================
-# 4. Parse multiple lines (links)
+# 4. Parse multiple lines (links) with deduplication
 # ===========================================================================
 def parse_multiple_proxies(text: str):
     lines = text.splitlines()
@@ -937,12 +937,13 @@ def generate_singbox_config(proxies, mode='tun'):
     return json.dumps(config, indent=2, ensure_ascii=False)
 
 # ===========================================================================
-# 9. Fetch subscription with smart Base64 detection
+# 9. Fetch subscription with smart Base64 detection and timeout
 # ===========================================================================
 def fetch_subscription(sub_link):
     try:
         req = urllib.request.Request(sub_link, headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, timeout=30) as resp:
+        # افزایش timeout برای ساب‌لینک‌های بزرگ
+        with urllib.request.urlopen(req, timeout=60) as resp:
             raw = resp.read().decode('utf-8-sig').strip()
             if not raw:
                 raise ValueError("پاسخ خالی است")
@@ -1025,17 +1026,21 @@ def main():
 
     singbox_json = generate_singbox_config(proxies, mode='tun')
 
-    # ===== تولید هر دو فایل =====
+    # ===== ذخیره در هر دو نام با اضافه کردن کامنت timestamp در انتها =====
+    # اضافه کردن یک کامنت با timestamp برای ایجاد تغییر اجباری
+    timestamp_comment = f"\n// Updated at: {datetime.now().isoformat()} //"
+    singbox_json_with_comment = singbox_json + timestamp_comment
+
     with open("javidbox", "w", encoding="utf-8") as f:
-        f.write(singbox_json)
+        f.write(singbox_json_with_comment)
     
     with open("javidbox.json", "w", encoding="utf-8") as f:
-        f.write(singbox_json)
+        f.write(singbox_json_with_comment)
 
     print(f"✅ فایل‌های javidbox و javidbox.json با موفقیت تولید شدند.")
     print(f"📊 تعداد نودهای موجود در خروجی: {len(proxies)}")
 
-    # نمایش پیش‌نمایش فایل
+    # نمایش پیش‌نمایش
     with open("javidbox.json", "r", encoding="utf-8") as f:
         preview = f.read(200)
         print(f"📄 پیش‌نمایش فایل (۲۰۰ کاراکتر اول):\n{preview}...")
