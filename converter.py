@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Sing-Box Subscription Converter (v9 - Fix duplicate tags)
+Sing-Box Subscription Converter (v10 - Fix duplicate tags definitively)
 Supports: VLESS, VMess, Shadowsocks, Trojan, Hysteria2, TUIC
 """
 
@@ -297,6 +297,26 @@ def deduplicate_servers(servers: list) -> list:
     return unique_servers
 
 
+def ensure_unique_tags(outbounds: list) -> list:
+    """
+    Guarantee that all outbound tags are unique by adding numeric suffixes
+    to duplicates. This is a final safety net.
+    """
+    used_tags = set()
+    for outbound in outbounds:
+        if 'tag' not in outbound:
+            continue
+        original_tag = outbound['tag']
+        tag = original_tag
+        counter = 2
+        while tag in used_tags:
+            tag = f"{original_tag}-{counter}"
+            counter += 1
+        outbound['tag'] = tag
+        used_tags.add(tag)
+    return outbounds
+
+
 def build_config(servers: list) -> dict:
     server_tags = [s['tag'] for s in servers]
     
@@ -320,6 +340,9 @@ def build_config(servers: list) -> dict:
         {"type": "direct", "tag": "direct"},
         {"type": "block", "tag": "block"},
     ]
+    
+    # یکتا‌سازی نهایی تمام تگ‌ها (شامل سرورها، سلکتور، یوآر‌ال‌تست و …)
+    outbounds = ensure_unique_tags(outbounds)
     
     config = {
         "$schema": "https://sing-box.sagernet.org/schema.json",
