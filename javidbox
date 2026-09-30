@@ -676,6 +676,75 @@
       "tag": "Domain1-TLS",
       "type": "vless",
       "server": "zr-wasm.mahdijavid3700.workers.dev",
+      "server_port": 443,
+      "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
+      "tls": {
+        "enabled": true,
+        "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/3LnNx92hbnpv?ed=2048",
+        "headers": {
+          "Host": "zr-wasm.mahdijavid3700.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain2-TLS",
+      "type": "vless",
+      "server": "creativecommons.org",
+      "server_port": 2087,
+      "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
+      "tls": {
+        "enabled": true,
+        "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/0fqIec5wDE5x?ed=2048",
+        "headers": {
+          "Host": "zr-wasm.mahdijavid3700.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain3-TLS",
+      "type": "vless",
+      "server": "sky.rethinkdns.com",
+      "server_port": 2096,
+      "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
+      "tls": {
+        "enabled": true,
+        "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/56qTvwj0fs4U?ed=2048",
+        "headers": {
+          "Host": "zr-wasm.mahdijavid3700.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain4-TLS",
+      "type": "vless",
+      "server": "www.speedtest.net",
       "server_port": 8443,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
@@ -688,76 +757,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/WR5R87DrcdXE?ed=2048",
-        "headers": {
-          "Host": "zr-wasm.mahdijavid3700.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain2-TLS",
-      "type": "vless",
-      "server": "creativecommons.org",
-      "server_port": 2053,
-      "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
-      "tls": {
-        "enabled": true,
-        "server_name": "zr-wasm.mahdijavid3700.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/acpgQrymaSpn?ed=2048",
-        "headers": {
-          "Host": "zr-wasm.mahdijavid3700.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain3-TLS",
-      "type": "vless",
-      "server": "sky.rethinkdns.com",
-      "server_port": 2053,
-      "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
-      "tls": {
-        "enabled": true,
-        "server_name": "zr-wasm.mahdijavid3700.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/IFfKs0z7Xw9g?ed=2048",
-        "headers": {
-          "Host": "zr-wasm.mahdijavid3700.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain4-TLS",
-      "type": "vless",
-      "server": "www.speedtest.net",
-      "server_port": 2053,
-      "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
-      "tls": {
-        "enabled": true,
-        "server_name": "zr-wasm.mahdijavid3700.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/AVqwTU9ZRPV6?ed=2048",
+        "path": "/GcYQCaLnnmu6?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -768,7 +768,7 @@
       "tag": "Domain5-TLS",
       "type": "vless",
       "server": "singapore.com",
-      "server_port": 2083,
+      "server_port": 8443,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
         "enabled": true,
@@ -780,7 +780,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/WuBfe4xaNbVS?ed=2048",
+        "path": "/BgxFnO6vH008?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -803,7 +803,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/sCOmVmYj5sgw?ed=2048",
+        "path": "/1ZwqcrxOP6WB?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -826,7 +826,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/RlLg2ebe8nV9?ed=2048",
+        "path": "/G93oegM7kgsz?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -837,7 +837,7 @@
       "tag": "Domain8-TLS",
       "type": "vless",
       "server": "www.wto.org",
-      "server_port": 2087,
+      "server_port": 2053,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
         "enabled": true,
@@ -849,7 +849,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/ShGcoEYT6CL3?ed=2048",
+        "path": "/byGPG2sBgepf?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -860,7 +860,7 @@
       "tag": "Domain9-TLS",
       "type": "vless",
       "server": "chatgpt.com",
-      "server_port": 2096,
+      "server_port": 2053,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
         "enabled": true,
@@ -872,7 +872,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/VAalqa8DvzYZ?ed=2048",
+        "path": "/BQDDHfqzkoF0?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -883,6 +883,29 @@
       "tag": "Domain10-TLS",
       "type": "vless",
       "server": "medium.com",
+      "server_port": 8443,
+      "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
+      "tls": {
+        "enabled": true,
+        "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/eEyrJ3paJSaf?ed=2048",
+        "headers": {
+          "Host": "zr-wasm.mahdijavid3700.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain11-TLS",
+      "type": "vless",
+      "server": "lb.nscl.ir",
       "server_port": 2087,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
@@ -895,30 +918,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/3R6c1Ho7wbgL?ed=2048",
-        "headers": {
-          "Host": "zr-wasm.mahdijavid3700.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain11-TLS",
-      "type": "vless",
-      "server": "lb.nscl.ir",
-      "server_port": 2096,
-      "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
-      "tls": {
-        "enabled": true,
-        "server_name": "zr-wasm.mahdijavid3700.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/3R2fckibPatl?ed=2048",
+        "path": "/Qv0YVOpT6NLA?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -941,7 +941,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/LMZ7LkqL0l5V?ed=2048",
+        "path": "/HqG7bu4Bx2xv?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -964,7 +964,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/l4DUDyDDJfk9?ed=2048",
+        "path": "/dIqvklOIjGac?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -975,7 +975,7 @@
       "tag": "Domain14-TLS",
       "type": "vless",
       "server": "harbor.io",
-      "server_port": 443,
+      "server_port": 2083,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
         "enabled": true,
@@ -987,7 +987,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/OMSt5NpI4d9O?ed=2048",
+        "path": "/QYF0Z8zujmCT?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -998,7 +998,7 @@
       "tag": "Domain15-TLS",
       "type": "vless",
       "server": "npmjs.com",
-      "server_port": 2096,
+      "server_port": 443,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
         "enabled": true,
@@ -1010,7 +1010,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/ZCnfF6e5eD9f?ed=2048",
+        "path": "/9oPDq0HA9Ktj?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -1021,7 +1021,7 @@
       "tag": "Domain16-TLS",
       "type": "vless",
       "server": "csgo.com",
-      "server_port": 2087,
+      "server_port": 2096,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
         "enabled": true,
@@ -1033,7 +1033,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/VJn3AruKjQ0O?ed=2048",
+        "path": "/ZUwaHfVcgxFA?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -1044,7 +1044,7 @@
       "tag": "Domain17-TLS",
       "type": "vless",
       "server": "fbi.gov",
-      "server_port": 2053,
+      "server_port": 2083,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
         "enabled": true,
@@ -1056,7 +1056,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/NN2YkW17m8Ex?ed=2048",
+        "path": "/dZ2pluSl1KHs?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -1067,7 +1067,7 @@
       "tag": "Domain18-TLS",
       "type": "vless",
       "server": "ip.sb",
-      "server_port": 2083,
+      "server_port": 2096,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
         "enabled": true,
@@ -1079,7 +1079,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/XIBECX2xpTFi?ed=2048",
+        "path": "/vRTGcUISu4UI?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -1090,7 +1090,7 @@
       "tag": "Domain19-TLS",
       "type": "vless",
       "server": "time.is",
-      "server_port": 8443,
+      "server_port": 2083,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
         "enabled": true,
@@ -1102,7 +1102,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/pLeuAA1ceSta?ed=2048",
+        "path": "/qPk5JLLaT3K5?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -1113,7 +1113,7 @@
       "tag": "Domain20-TLS",
       "type": "vless",
       "server": "icook.hk",
-      "server_port": 2053,
+      "server_port": 2096,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
         "enabled": true,
@@ -1125,7 +1125,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/r0Vmb3wUHpOh?ed=2048",
+        "path": "/Wt6Gs2rv8oyn?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -1136,7 +1136,7 @@
       "tag": "Domain21-TLS",
       "type": "vless",
       "server": "codepen.io",
-      "server_port": 2096,
+      "server_port": 2083,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
         "enabled": true,
@@ -1148,7 +1148,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/LSKDJytRKhC3?ed=2048",
+        "path": "/cnKzi73ucuwp?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -1159,7 +1159,7 @@
       "tag": "Domain22-TLS",
       "type": "vless",
       "server": "unpkg.com",
-      "server_port": 8443,
+      "server_port": 2053,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
         "enabled": true,
@@ -1171,7 +1171,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/Vjp3dpayColn?ed=2048",
+        "path": "/Zy6nXKgQMKJs?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -1182,7 +1182,7 @@
       "tag": "Domain23-TLS",
       "type": "vless",
       "server": "jsdelivr.com",
-      "server_port": 2096,
+      "server_port": 2087,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
         "enabled": true,
@@ -1194,7 +1194,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/rGpIx2RhcRnv?ed=2048",
+        "path": "/kviKkirTDePs?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -1205,7 +1205,7 @@
       "tag": "Domain24-TLS",
       "type": "vless",
       "server": "www.cdnjs.com",
-      "server_port": 2053,
+      "server_port": 2083,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
         "enabled": true,
@@ -1217,7 +1217,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/HRapg421aSZ9?ed=2048",
+        "path": "/Zt31qtTrMIKM?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -1228,7 +1228,7 @@
       "tag": "Domain25-TLS",
       "type": "vless",
       "server": "auth.vercel.com",
-      "server_port": 2083,
+      "server_port": 2053,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
         "enabled": true,
@@ -1240,7 +1240,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/eyCpRgsSOshN?ed=2048",
+        "path": "/elQja336t7z7?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -1251,7 +1251,7 @@
       "tag": "Domain26-TLS",
       "type": "vless",
       "server": "www.udacity.com",
-      "server_port": 2053,
+      "server_port": 2083,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
         "enabled": true,
@@ -1263,7 +1263,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/FTeQCM0glNv2?ed=2048",
+        "path": "/I5twM5QIjQH3?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -1274,7 +1274,7 @@
       "tag": "Domain27-TLS",
       "type": "vless",
       "server": "www.gitbook.com",
-      "server_port": 443,
+      "server_port": 2053,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
         "enabled": true,
@@ -1286,7 +1286,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/PZXzh8y3LygR?ed=2048",
+        "path": "/TfcTSEeKSdSN?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -1297,7 +1297,7 @@
       "tag": "Domain28-TLS",
       "type": "vless",
       "server": "www.ipaddress.my",
-      "server_port": 8443,
+      "server_port": 2087,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
         "enabled": true,
@@ -1309,7 +1309,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/ZWr754ZAW1nc?ed=2048",
+        "path": "/3XmiUR1MlZjX?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -1320,7 +1320,7 @@
       "tag": "Domain29-TLS",
       "type": "vless",
       "server": "www.glassdoor.com",
-      "server_port": 2096,
+      "server_port": 2083,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
         "enabled": true,
@@ -1332,7 +1332,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/Ie7yQvswnaPU?ed=2048",
+        "path": "/buMxEmlDgmAA?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -1343,7 +1343,7 @@
       "tag": "Domain30-TLS",
       "type": "vless",
       "server": "www.ipchicken.com",
-      "server_port": 2083,
+      "server_port": 443,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
         "enabled": true,
@@ -1355,7 +1355,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/H70PnHYlkUw0?ed=2048",
+        "path": "/OoW7uR62oL7k?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -1366,7 +1366,7 @@
       "tag": "Domain31-TLS",
       "type": "vless",
       "server": "static.cloudflareinsights.com",
-      "server_port": 2096,
+      "server_port": 443,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
         "enabled": true,
@@ -1378,7 +1378,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/Q8dYYSQP6ZHF?ed=2048",
+        "path": "/lX5whOTK1lwp?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -1389,7 +1389,7 @@
       "tag": "IP1-TLS",
       "type": "vless",
       "server": "104.16.148.70",
-      "server_port": 2053,
+      "server_port": 443,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
         "enabled": true,
@@ -1401,7 +1401,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/T8UcHQVTwQbu?ed=2048",
+        "path": "/xFbZJ4mMbBGJ?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -1411,7 +1411,7 @@
       "tag": "IP2-TLS",
       "type": "vless",
       "server": "172.64.146.202",
-      "server_port": 2083,
+      "server_port": 2096,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
         "enabled": true,
@@ -1423,7 +1423,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/7PHaRclGyMOO?ed=2048",
+        "path": "/wEAM9LcKlnZ7?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -1433,7 +1433,7 @@
       "tag": "IP3-TLS",
       "type": "vless",
       "server": "172.67.138.19",
-      "server_port": 2096,
+      "server_port": 443,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
         "enabled": true,
@@ -1445,7 +1445,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/ds9ehTCltN2Q?ed=2048",
+        "path": "/JggcQ026e12X?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -1455,7 +1455,7 @@
       "tag": "IP4-TLS",
       "type": "vless",
       "server": "104.18.79.33",
-      "server_port": 2096,
+      "server_port": 443,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
         "enabled": true,
@@ -1467,7 +1467,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/qk3hRtGZsWt8?ed=2048",
+        "path": "/HTa68PzjXFG7?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -1477,6 +1477,28 @@
       "tag": "IP5-TLS",
       "type": "vless",
       "server": "104.27.196.191",
+      "server_port": 2053,
+      "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
+      "tls": {
+        "enabled": true,
+        "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/1J7J9uBLyeUf?ed=2048",
+        "headers": {
+          "Host": "zr-wasm.mahdijavid3700.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP6-TLS",
+      "type": "vless",
+      "server": "162.159.195.34",
       "server_port": 2083,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
@@ -1489,29 +1511,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/LXDHyilELwSz?ed=2048",
-        "headers": {
-          "Host": "zr-wasm.mahdijavid3700.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP6-TLS",
-      "type": "vless",
-      "server": "162.159.195.34",
-      "server_port": 2053,
-      "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
-      "tls": {
-        "enabled": true,
-        "server_name": "zr-wasm.mahdijavid3700.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/mt6hpZC5f4tR?ed=2048",
+        "path": "/R04av7Rla9wJ?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -1521,7 +1521,7 @@
       "tag": "IP7-TLS",
       "type": "vless",
       "server": "188.114.97.178",
-      "server_port": 2053,
+      "server_port": 8443,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
         "enabled": true,
@@ -1533,7 +1533,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/kItyIueTFrRG?ed=2048",
+        "path": "/td490U3hBQD6?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -1543,7 +1543,7 @@
       "tag": "IP8-TLS",
       "type": "vless",
       "server": "104.16.140.249",
-      "server_port": 443,
+      "server_port": 8443,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
         "enabled": true,
@@ -1555,7 +1555,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/R3Wdk5rHub7Q?ed=2048",
+        "path": "/dFfApMZRVUUE?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -1565,116 +1565,6 @@
       "tag": "IP9-TLS",
       "type": "vless",
       "server": "172.67.158.244",
-      "server_port": 8443,
-      "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
-      "tls": {
-        "enabled": true,
-        "server_name": "zr-wasm.mahdijavid3700.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/yj5BUOmLdIEX?ed=2048",
-        "headers": {
-          "Host": "zr-wasm.mahdijavid3700.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP10-TLS",
-      "type": "vless",
-      "server": "104.26.4.180",
-      "server_port": 2087,
-      "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
-      "tls": {
-        "enabled": true,
-        "server_name": "zr-wasm.mahdijavid3700.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/5VR5aizhjGlM?ed=2048",
-        "headers": {
-          "Host": "zr-wasm.mahdijavid3700.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP11-TLS",
-      "type": "vless",
-      "server": "104.16.92.232",
-      "server_port": 2053,
-      "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
-      "tls": {
-        "enabled": true,
-        "server_name": "zr-wasm.mahdijavid3700.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/O98JCOaodeZX?ed=2048",
-        "headers": {
-          "Host": "zr-wasm.mahdijavid3700.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP12-TLS",
-      "type": "vless",
-      "server": "188.114.97.105",
-      "server_port": 8443,
-      "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
-      "tls": {
-        "enabled": true,
-        "server_name": "zr-wasm.mahdijavid3700.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/QTLqlG9J29pH?ed=2048",
-        "headers": {
-          "Host": "zr-wasm.mahdijavid3700.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP13-TLS",
-      "type": "vless",
-      "server": "172.67.138.163",
-      "server_port": 2053,
-      "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
-      "tls": {
-        "enabled": true,
-        "server_name": "zr-wasm.mahdijavid3700.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/Gw1FRxVZ8jRh?ed=2048",
-        "headers": {
-          "Host": "zr-wasm.mahdijavid3700.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP14-TLS",
-      "type": "vless",
-      "server": "104.16.0.166",
       "server_port": 443,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
@@ -1687,16 +1577,104 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/mQO4TkPGpsvI?ed=2048",
+        "path": "/khmIq5te57W6?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
       }
     },
     {
-      "tag": "IP15-TLS",
+      "tag": "IP10-TLS",
       "type": "vless",
-      "server": "8.6.112.25",
+      "server": "104.26.4.180",
+      "server_port": 2053,
+      "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
+      "tls": {
+        "enabled": true,
+        "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/dYWxLjtWLGnl?ed=2048",
+        "headers": {
+          "Host": "zr-wasm.mahdijavid3700.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP11-TLS",
+      "type": "vless",
+      "server": "104.16.92.232",
+      "server_port": 2083,
+      "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
+      "tls": {
+        "enabled": true,
+        "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/xRwCJjsSaHM2?ed=2048",
+        "headers": {
+          "Host": "zr-wasm.mahdijavid3700.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP12-TLS",
+      "type": "vless",
+      "server": "188.114.97.105",
+      "server_port": 2053,
+      "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
+      "tls": {
+        "enabled": true,
+        "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/VfleAMqrxxaR?ed=2048",
+        "headers": {
+          "Host": "zr-wasm.mahdijavid3700.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP13-TLS",
+      "type": "vless",
+      "server": "172.67.138.163",
+      "server_port": 2083,
+      "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
+      "tls": {
+        "enabled": true,
+        "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/hqELLeWIqZAT?ed=2048",
+        "headers": {
+          "Host": "zr-wasm.mahdijavid3700.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP14-TLS",
+      "type": "vless",
+      "server": "104.16.0.166",
       "server_port": 2087,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
@@ -1709,17 +1687,17 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/u0e5GN0JjGGT?ed=2048",
+        "path": "/qij3vtuZUSql?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
       }
     },
     {
-      "tag": "IP16-TLS",
+      "tag": "IP15-TLS",
       "type": "vless",
-      "server": "162.159.243.4",
-      "server_port": 8443,
+      "server": "8.6.112.25",
+      "server_port": 2083,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
         "enabled": true,
@@ -1731,7 +1709,29 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/01I9Z4hqfUiJ?ed=2048",
+        "path": "/Sydqf7kXKERX?ed=2048",
+        "headers": {
+          "Host": "zr-wasm.mahdijavid3700.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP16-TLS",
+      "type": "vless",
+      "server": "162.159.243.4",
+      "server_port": 2096,
+      "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
+      "tls": {
+        "enabled": true,
+        "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/3gSDjZLPtufS?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -1753,7 +1753,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/GktnWfX7q7yd?ed=2048",
+        "path": "/tT95098peQc9?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -1763,28 +1763,6 @@
       "tag": "IP18-TLS",
       "type": "vless",
       "server": "104.27.196.25",
-      "server_port": 2096,
-      "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
-      "tls": {
-        "enabled": true,
-        "server_name": "zr-wasm.mahdijavid3700.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/j5oJQfdmuq6k?ed=2048",
-        "headers": {
-          "Host": "zr-wasm.mahdijavid3700.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP19-TLS",
-      "type": "vless",
-      "server": "104.16.140.150",
       "server_port": 2053,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
@@ -1797,17 +1775,17 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/QdM8cCp2sZE9?ed=2048",
+        "path": "/z47dnAyFYxLn?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
       }
     },
     {
-      "tag": "IP20-TLS",
+      "tag": "IP19-TLS",
       "type": "vless",
-      "server": "188.114.97.53",
-      "server_port": 2096,
+      "server": "104.16.140.150",
+      "server_port": 2083,
       "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
       "tls": {
         "enabled": true,
@@ -1819,7 +1797,29 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/MVmkAFUwRL65?ed=2048",
+        "path": "/psYkM7SzOVZM?ed=2048",
+        "headers": {
+          "Host": "zr-wasm.mahdijavid3700.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP20-TLS",
+      "type": "vless",
+      "server": "188.114.97.53",
+      "server_port": 2053,
+      "uuid": "387c65fa-6a63-4c30-84e5-46d2de7c39d9",
+      "tls": {
+        "enabled": true,
+        "server_name": "zr-wasm.mahdijavid3700.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/Pg3UH7jndNnL?ed=2048",
         "headers": {
           "Host": "zr-wasm.mahdijavid3700.workers.dev"
         }
@@ -1829,7 +1829,7 @@
       "tag": "Domain1-TLS_1",
       "type": "vless",
       "server": "zizijavid.mahdijavid370.workers.dev",
-      "server_port": 8443,
+      "server_port": 2083,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
         "enabled": true,
@@ -1841,7 +1841,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/GBT6pdgVX0gf?ed=2048",
+        "path": "/F5mMgJMMeoLu?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -1864,7 +1864,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/RGTw9wqJtARX?ed=2048",
+        "path": "/TWxnHzWKALq5?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -1887,7 +1887,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/0UEvipUckv1R?ed=2048",
+        "path": "/BodknaGEDbOk?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -1898,7 +1898,7 @@
       "tag": "Domain4-TLS_1",
       "type": "vless",
       "server": "www.speedtest.net",
-      "server_port": 8443,
+      "server_port": 443,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
         "enabled": true,
@@ -1910,7 +1910,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/AwvrFnVfCHEc?ed=2048",
+        "path": "/GnynLWdVTs1p?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -1921,52 +1921,6 @@
       "tag": "Domain5-TLS_1",
       "type": "vless",
       "server": "singapore.com",
-      "server_port": 8443,
-      "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid.mahdijavid370.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/5qFQl3RJzVzs?ed=2048",
-        "headers": {
-          "Host": "zizijavid.mahdijavid370.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain6-TLS_1",
-      "type": "vless",
-      "server": "go.inmobi.com",
-      "server_port": 8443,
-      "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid.mahdijavid370.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/CTHC76lclaiB?ed=2048",
-        "headers": {
-          "Host": "zizijavid.mahdijavid370.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain7-TLS_1",
-      "type": "vless",
-      "server": "www.visa.com",
       "server_port": 2096,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
@@ -1979,7 +1933,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/tB2unSZUO9Fb?ed=2048",
+        "path": "/hf4RH6mxH2Tp?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -1987,10 +1941,10 @@
       "domain_resolver": "dns-direct"
     },
     {
-      "tag": "Domain8-TLS_1",
+      "tag": "Domain6-TLS_1",
       "type": "vless",
-      "server": "www.wto.org",
-      "server_port": 8443,
+      "server": "go.inmobi.com",
+      "server_port": 2083,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
         "enabled": true,
@@ -2002,7 +1956,53 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/DmrtGLxWwpz9?ed=2048",
+        "path": "/o7SPgWpp7ryh?ed=2048",
+        "headers": {
+          "Host": "zizijavid.mahdijavid370.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain7-TLS_1",
+      "type": "vless",
+      "server": "www.visa.com",
+      "server_port": 2087,
+      "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/erspFyNcUVZl?ed=2048",
+        "headers": {
+          "Host": "zizijavid.mahdijavid370.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain8-TLS_1",
+      "type": "vless",
+      "server": "www.wto.org",
+      "server_port": 2053,
+      "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/D4oumlSNiSEu?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -2025,7 +2025,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/9lxnjsvCRocB?ed=2048",
+        "path": "/RiYMicGLERtW?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -2036,6 +2036,144 @@
       "tag": "Domain10-TLS_1",
       "type": "vless",
       "server": "medium.com",
+      "server_port": 443,
+      "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/0jURwmpWeK14?ed=2048",
+        "headers": {
+          "Host": "zizijavid.mahdijavid370.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain11-TLS_1",
+      "type": "vless",
+      "server": "lb.nscl.ir",
+      "server_port": 8443,
+      "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/OiBIvXEa4W11?ed=2048",
+        "headers": {
+          "Host": "zizijavid.mahdijavid370.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain12-TLS_1",
+      "type": "vless",
+      "server": "nodejs.org",
+      "server_port": 2096,
+      "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/FeIi0Y0cIpjb?ed=2048",
+        "headers": {
+          "Host": "zizijavid.mahdijavid370.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain13-TLS_1",
+      "type": "vless",
+      "server": "linkerd.io",
+      "server_port": 2053,
+      "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/bfTUCHGfvQwt?ed=2048",
+        "headers": {
+          "Host": "zizijavid.mahdijavid370.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain14-TLS_1",
+      "type": "vless",
+      "server": "harbor.io",
+      "server_port": 2096,
+      "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/dERt8jFLdZqD?ed=2048",
+        "headers": {
+          "Host": "zizijavid.mahdijavid370.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain15-TLS_1",
+      "type": "vless",
+      "server": "npmjs.com",
+      "server_port": 2096,
+      "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/iZfwYrmIIU0y?ed=2048",
+        "headers": {
+          "Host": "zizijavid.mahdijavid370.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain16-TLS_1",
+      "type": "vless",
+      "server": "csgo.com",
       "server_port": 2087,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
@@ -2048,145 +2186,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/Ce8cNjFimfos?ed=2048",
-        "headers": {
-          "Host": "zizijavid.mahdijavid370.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain11-TLS_1",
-      "type": "vless",
-      "server": "lb.nscl.ir",
-      "server_port": 2096,
-      "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid.mahdijavid370.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/GR570G4xccXR?ed=2048",
-        "headers": {
-          "Host": "zizijavid.mahdijavid370.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain12-TLS_1",
-      "type": "vless",
-      "server": "nodejs.org",
-      "server_port": 8443,
-      "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid.mahdijavid370.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/iqw0NAaaliht?ed=2048",
-        "headers": {
-          "Host": "zizijavid.mahdijavid370.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain13-TLS_1",
-      "type": "vless",
-      "server": "linkerd.io",
-      "server_port": 2096,
-      "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid.mahdijavid370.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/EXC2gbe92GUZ?ed=2048",
-        "headers": {
-          "Host": "zizijavid.mahdijavid370.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain14-TLS_1",
-      "type": "vless",
-      "server": "harbor.io",
-      "server_port": 443,
-      "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid.mahdijavid370.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/63OU9zkT5OPX?ed=2048",
-        "headers": {
-          "Host": "zizijavid.mahdijavid370.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain15-TLS_1",
-      "type": "vless",
-      "server": "npmjs.com",
-      "server_port": 8443,
-      "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid.mahdijavid370.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/cjAvVia9aFTv?ed=2048",
-        "headers": {
-          "Host": "zizijavid.mahdijavid370.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain16-TLS_1",
-      "type": "vless",
-      "server": "csgo.com",
-      "server_port": 443,
-      "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid.mahdijavid370.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/DoxMnT3l50QS?ed=2048",
+        "path": "/WlN7tB54GYQM?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -2197,52 +2197,6 @@
       "tag": "Domain17-TLS_1",
       "type": "vless",
       "server": "fbi.gov",
-      "server_port": 2053,
-      "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid.mahdijavid370.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/bI7TL3y7ClPi?ed=2048",
-        "headers": {
-          "Host": "zizijavid.mahdijavid370.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain18-TLS_1",
-      "type": "vless",
-      "server": "ip.sb",
-      "server_port": 2053,
-      "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid.mahdijavid370.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/SleBWgjwgsOh?ed=2048",
-        "headers": {
-          "Host": "zizijavid.mahdijavid370.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain19-TLS_1",
-      "type": "vless",
-      "server": "time.is",
       "server_port": 8443,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
@@ -2255,7 +2209,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/MrGmUz8r5LJd?ed=2048",
+        "path": "/qEolHQjoG0yV?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -2263,10 +2217,10 @@
       "domain_resolver": "dns-direct"
     },
     {
-      "tag": "Domain20-TLS_1",
+      "tag": "Domain18-TLS_1",
       "type": "vless",
-      "server": "icook.hk",
-      "server_port": 2083,
+      "server": "ip.sb",
+      "server_port": 2087,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
         "enabled": true,
@@ -2278,7 +2232,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/cAyif0X5DgGT?ed=2048",
+        "path": "/xafECAK3HRE3?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -2286,9 +2240,9 @@
       "domain_resolver": "dns-direct"
     },
     {
-      "tag": "Domain21-TLS_1",
+      "tag": "Domain19-TLS_1",
       "type": "vless",
-      "server": "codepen.io",
+      "server": "time.is",
       "server_port": 2053,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
@@ -2301,7 +2255,53 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/DWN9ryXWtvT4?ed=2048",
+        "path": "/T1BrkIwgbaqi?ed=2048",
+        "headers": {
+          "Host": "zizijavid.mahdijavid370.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain20-TLS_1",
+      "type": "vless",
+      "server": "icook.hk",
+      "server_port": 2053,
+      "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/z5VA0B0lVSKo?ed=2048",
+        "headers": {
+          "Host": "zizijavid.mahdijavid370.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain21-TLS_1",
+      "type": "vless",
+      "server": "codepen.io",
+      "server_port": 2087,
+      "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/dMB35a1HNRUv?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -2324,7 +2324,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/WH61fpCSaRfM?ed=2048",
+        "path": "/UDn3jnY3Vn7D?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -2335,29 +2335,6 @@
       "tag": "Domain23-TLS_1",
       "type": "vless",
       "server": "jsdelivr.com",
-      "server_port": 8443,
-      "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid.mahdijavid370.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/HqhLzKODPDph?ed=2048",
-        "headers": {
-          "Host": "zizijavid.mahdijavid370.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain24-TLS_1",
-      "type": "vless",
-      "server": "chatgpt.com",
       "server_port": 443,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
@@ -2370,7 +2347,30 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/sPkoBiGzbYZ7?ed=2048",
+        "path": "/8N6N5wVXiAk4?ed=2048",
+        "headers": {
+          "Host": "zizijavid.mahdijavid370.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain24-TLS_1",
+      "type": "vless",
+      "server": "chatgpt.com",
+      "server_port": 2083,
+      "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/clEvlsUbcRs7?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -2393,7 +2393,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/qxuASvjwlaKM?ed=2048",
+        "path": "/KEjnXeDM9jjO?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -2404,7 +2404,7 @@
       "tag": "Domain26-TLS_1",
       "type": "vless",
       "server": "auth.vercel.com",
-      "server_port": 2087,
+      "server_port": 2053,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
         "enabled": true,
@@ -2416,7 +2416,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/frOivkSEo1OQ?ed=2048",
+        "path": "/SfzRVojJBNIS?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -2427,7 +2427,7 @@
       "tag": "Domain27-TLS_1",
       "type": "vless",
       "server": "www.udacity.com",
-      "server_port": 443,
+      "server_port": 8443,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
         "enabled": true,
@@ -2439,7 +2439,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/ZTM51OJSrsEp?ed=2048",
+        "path": "/dBZhIgY6VF9U?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -2450,7 +2450,7 @@
       "tag": "Domain28-TLS_1",
       "type": "vless",
       "server": "www.gitbook.com",
-      "server_port": 443,
+      "server_port": 2096,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
         "enabled": true,
@@ -2462,7 +2462,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/0IAejYE7wvqo?ed=2048",
+        "path": "/jWIdxflE0HI6?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -2473,7 +2473,7 @@
       "tag": "Domain29-TLS_1",
       "type": "vless",
       "server": "www.ipaddress.my",
-      "server_port": 443,
+      "server_port": 2053,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
         "enabled": true,
@@ -2485,7 +2485,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/j2Bmto83rAfd?ed=2048",
+        "path": "/A6E4FBREblXG?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -2496,7 +2496,7 @@
       "tag": "Domain30-TLS_1",
       "type": "vless",
       "server": "www.glassdoor.com",
-      "server_port": 2083,
+      "server_port": 2053,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
         "enabled": true,
@@ -2508,7 +2508,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/hfGGDfjA30es?ed=2048",
+        "path": "/Vge9rm2OgvCX?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -2531,7 +2531,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/12F1BEmH9FYX?ed=2048",
+        "path": "/YSKBTHDRA401?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -2542,7 +2542,7 @@
       "tag": "Domain32-TLS",
       "type": "vless",
       "server": "static.cloudflareinsights.com",
-      "server_port": 8443,
+      "server_port": 443,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
         "enabled": true,
@@ -2554,7 +2554,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/N3axEGR4CktR?ed=2048",
+        "path": "/AVqh1orCneZt?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -2565,6 +2565,28 @@
       "tag": "IP1-TLS_1",
       "type": "vless",
       "server": "104.26.4.66",
+      "server_port": 2083,
+      "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/hAbVqVno46KS?ed=2048",
+        "headers": {
+          "Host": "zizijavid.mahdijavid370.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP2-TLS_1",
+      "type": "vless",
+      "server": "104.17.222.45",
       "server_port": 2053,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
@@ -2577,16 +2599,16 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/O2QotpDVbx1D?ed=2048",
+        "path": "/6qvCFdCJh3sS?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
       }
     },
     {
-      "tag": "IP2-TLS_1",
+      "tag": "IP3-TLS_1",
       "type": "vless",
-      "server": "104.17.222.45",
+      "server": "104.20.6.217",
       "server_port": 8443,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
@@ -2599,29 +2621,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/YD1PcbOJk2Na?ed=2048",
-        "headers": {
-          "Host": "zizijavid.mahdijavid370.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP3-TLS_1",
-      "type": "vless",
-      "server": "104.20.6.217",
-      "server_port": 2096,
-      "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid.mahdijavid370.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/pnWYES1IQdcT?ed=2048",
+        "path": "/txcS0WnKyeUu?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -2631,7 +2631,7 @@
       "tag": "IP4-TLS_1",
       "type": "vless",
       "server": "104.17.222.216",
-      "server_port": 2096,
+      "server_port": 2053,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
         "enabled": true,
@@ -2643,7 +2643,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/vH7fqEymo9f9?ed=2048",
+        "path": "/3gvIF6NXUqw8?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -2653,7 +2653,7 @@
       "tag": "IP5-TLS_1",
       "type": "vless",
       "server": "104.16.147.222",
-      "server_port": 443,
+      "server_port": 2083,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
         "enabled": true,
@@ -2665,7 +2665,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/QkmWD3WeOXhP?ed=2048",
+        "path": "/D5LhxLAZjB0W?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -2675,7 +2675,7 @@
       "tag": "IP6-TLS_1",
       "type": "vless",
       "server": "162.159.195.168",
-      "server_port": 443,
+      "server_port": 2087,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
         "enabled": true,
@@ -2687,7 +2687,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/6TrT8XsrFNsd?ed=2048",
+        "path": "/U5y6SPxyIwK9?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -2697,7 +2697,7 @@
       "tag": "IP7-TLS_1",
       "type": "vless",
       "server": "104.16.92.40",
-      "server_port": 2087,
+      "server_port": 2053,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
         "enabled": true,
@@ -2709,7 +2709,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/Wf4lAuTlsvIN?ed=2048",
+        "path": "/p15ZeOLJjiqo?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -2719,7 +2719,7 @@
       "tag": "IP8-TLS_1",
       "type": "vless",
       "server": "141.101.115.9",
-      "server_port": 2087,
+      "server_port": 2083,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
         "enabled": true,
@@ -2731,7 +2731,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/kG5wp5J9ax3N?ed=2048",
+        "path": "/BNJoBicxiUyW?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -2753,7 +2753,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/FxtiIAWeLewu?ed=2048",
+        "path": "/8rlBXTNDocWl?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -2763,7 +2763,7 @@
       "tag": "IP10-TLS_1",
       "type": "vless",
       "server": "104.18.79.210",
-      "server_port": 2096,
+      "server_port": 2087,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
         "enabled": true,
@@ -2775,7 +2775,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/9McI2ZbNpgFL?ed=2048",
+        "path": "/vXXxbvq1K745?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -2785,7 +2785,7 @@
       "tag": "IP11-TLS_1",
       "type": "vless",
       "server": "190.93.245.48",
-      "server_port": 443,
+      "server_port": 2083,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
         "enabled": true,
@@ -2797,7 +2797,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/imwYR3vF37XG?ed=2048",
+        "path": "/puQItB2b5W0C?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -2819,7 +2819,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/aby0oxCgoaqx?ed=2048",
+        "path": "/rav1ictyNHNM?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -2829,28 +2829,6 @@
       "tag": "IP13-TLS_1",
       "type": "vless",
       "server": "104.18.79.88",
-      "server_port": 443,
-      "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid.mahdijavid370.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/DK3wShTkY5RB?ed=2048",
-        "headers": {
-          "Host": "zizijavid.mahdijavid370.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP14-TLS_1",
-      "type": "vless",
-      "server": "8.6.112.63",
       "server_port": 2053,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
@@ -2863,16 +2841,16 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/099IVAkmHwU3?ed=2048",
+        "path": "/20m0snXhvM95?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
       }
     },
     {
-      "tag": "IP15-TLS_1",
+      "tag": "IP14-TLS_1",
       "type": "vless",
-      "server": "104.27.196.20",
+      "server": "8.6.112.63",
       "server_port": 2096,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
@@ -2885,38 +2863,16 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/ho7holPZvPUr?ed=2048",
+        "path": "/d5mIo529Sajb?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
       }
     },
     {
-      "tag": "IP16-TLS_1",
+      "tag": "IP15-TLS_1",
       "type": "vless",
-      "server": "190.93.245.178",
-      "server_port": 2053,
-      "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid.mahdijavid370.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/LR98hV1OA1iL?ed=2048",
-        "headers": {
-          "Host": "zizijavid.mahdijavid370.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP17-TLS_1",
-      "type": "vless",
-      "server": "104.17.222.118",
+      "server": "104.27.196.20",
       "server_port": 8443,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
@@ -2929,17 +2885,17 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/QenPTe5xlh45?ed=2048",
+        "path": "/EjLoXsvWXrXp?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
       }
     },
     {
-      "tag": "IP18-TLS_1",
+      "tag": "IP16-TLS_1",
       "type": "vless",
-      "server": "141.101.115.78",
-      "server_port": 2096,
+      "server": "190.93.245.178",
+      "server_port": 443,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
         "enabled": true,
@@ -2951,16 +2907,16 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/OD0TydTJYU3A?ed=2048",
+        "path": "/tqGGdqinHh7c?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
       }
     },
     {
-      "tag": "IP19-TLS_1",
+      "tag": "IP17-TLS_1",
       "type": "vless",
-      "server": "188.114.96.167",
+      "server": "104.17.222.118",
       "server_port": 2053,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
@@ -2973,17 +2929,17 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/IJrUfFDA1ctz?ed=2048",
+        "path": "/ptWmhPsPI0EA?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
       }
     },
     {
-      "tag": "IP20-TLS_1",
+      "tag": "IP18-TLS_1",
       "type": "vless",
-      "server": "162.159.193.17",
-      "server_port": 2087,
+      "server": "141.101.115.78",
+      "server_port": 2083,
       "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
       "tls": {
         "enabled": true,
@@ -2995,7 +2951,51 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/g6FQ23ElE91y?ed=2048",
+        "path": "/YGv0kdvYcgXU?ed=2048",
+        "headers": {
+          "Host": "zizijavid.mahdijavid370.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP19-TLS_1",
+      "type": "vless",
+      "server": "188.114.96.167",
+      "server_port": 2083,
+      "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/enI455wZ4IZ7?ed=2048",
+        "headers": {
+          "Host": "zizijavid.mahdijavid370.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP20-TLS_1",
+      "type": "vless",
+      "server": "162.159.193.17",
+      "server_port": 2096,
+      "uuid": "a35c68cb-efae-45b9-8b90-8243eac4bf32",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid.mahdijavid370.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/NK7dB4SuI6Qs?ed=2048",
         "headers": {
           "Host": "zizijavid.mahdijavid370.workers.dev"
         }
@@ -3017,7 +3017,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/ZbRMuxRkDDPL?ed=2048",
+        "path": "/D6voBLLBGW8b?ed=2048",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -3028,11 +3028,11 @@
       "tag": "Domain1-TCP",
       "type": "vless",
       "server": "zr-wasm.mah123-efc.workers.dev",
-      "server_port": 2086,
+      "server_port": 2082,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "transport": {
         "type": "ws",
-        "path": "/Ei2USSJgElkD?ed=2560",
+        "path": "/QdpJIesFEkLs?ed=2560",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -3055,7 +3055,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/bv6ino5WGrBU?ed=2048",
+        "path": "/oxxFOJ5kMgWU?ed=2048",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -3070,7 +3070,7 @@
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "transport": {
         "type": "ws",
-        "path": "/RnncXCt7gGYb?ed=2560",
+        "path": "/fWib4O7MG144?ed=2560",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -3081,7 +3081,7 @@
       "tag": "Domain3-TLS_2",
       "type": "vless",
       "server": "www.speedtest.net",
-      "server_port": 2096,
+      "server_port": 8443,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "tls": {
         "enabled": true,
@@ -3093,7 +3093,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/zrMTMQFsohIQ?ed=2048",
+        "path": "/09JFy20bbubl?ed=2048",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -3104,11 +3104,11 @@
       "tag": "Domain3-TCP",
       "type": "vless",
       "server": "www.speedtest.net",
-      "server_port": 2082,
+      "server_port": 8080,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "transport": {
         "type": "ws",
-        "path": "/UOLPIq1SmfIB?ed=2560",
+        "path": "/xREaOy7YzDOB?ed=2560",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -3119,7 +3119,7 @@
       "tag": "Domain4-TLS_2",
       "type": "vless",
       "server": "sky.rethinkdns.com",
-      "server_port": 2053,
+      "server_port": 2087,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "tls": {
         "enabled": true,
@@ -3131,7 +3131,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/PmEl7Q0VSKUV?ed=2048",
+        "path": "/UKPqDvfiyN35?ed=2048",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -3142,11 +3142,11 @@
       "tag": "Domain4-TCP",
       "type": "vless",
       "server": "sky.rethinkdns.com",
-      "server_port": 2082,
+      "server_port": 8880,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "transport": {
         "type": "ws",
-        "path": "/38ZirZlSBKj9?ed=2560",
+        "path": "/09d0MgKe7QgN?ed=2560",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -3157,7 +3157,7 @@
       "tag": "Domain5-TLS_2",
       "type": "vless",
       "server": "chat.openai.com",
-      "server_port": 2096,
+      "server_port": 2087,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "tls": {
         "enabled": true,
@@ -3169,7 +3169,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/T8svH8X3HSdd?ed=2048",
+        "path": "/Vxuin3YDpwYx?ed=2048",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -3180,11 +3180,11 @@
       "tag": "Domain5-TCP",
       "type": "vless",
       "server": "chat.openai.com",
-      "server_port": 2086,
+      "server_port": 8880,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "transport": {
         "type": "ws",
-        "path": "/Jyt8QnLYDYlU?ed=2560",
+        "path": "/aDHYfCm1f5gz?ed=2560",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -3195,7 +3195,7 @@
       "tag": "Domain6-TLS_2",
       "type": "vless",
       "server": "cfip.xxxxxxxx.tk",
-      "server_port": 2083,
+      "server_port": 2087,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "tls": {
         "enabled": true,
@@ -3207,7 +3207,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/S2FUI6BYfhv0?ed=2048",
+        "path": "/NMwh3KsAn139?ed=2048",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -3218,11 +3218,11 @@
       "tag": "Domain6-TCP",
       "type": "vless",
       "server": "cfip.xxxxxxxx.tk",
-      "server_port": 2095,
+      "server_port": 80,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "transport": {
         "type": "ws",
-        "path": "/Uf6YldyQWoqu?ed=2560",
+        "path": "/Hj46ihhRilQ3?ed=2560",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -3233,7 +3233,7 @@
       "tag": "Domain7-TLS_2",
       "type": "vless",
       "server": "go.inmobi.com",
-      "server_port": 2096,
+      "server_port": 8443,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "tls": {
         "enabled": true,
@@ -3245,7 +3245,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/ErCGE6munqZv?ed=2048",
+        "path": "/6JWdQNPXa9CC?ed=2048",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -3260,7 +3260,7 @@
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "transport": {
         "type": "ws",
-        "path": "/kbAzBvv2u7uW?ed=2560",
+        "path": "/Nw0sWIff27l7?ed=2560",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -3271,7 +3271,7 @@
       "tag": "Domain8-TLS_2",
       "type": "vless",
       "server": "singapore.com",
-      "server_port": 443,
+      "server_port": 2053,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "tls": {
         "enabled": true,
@@ -3283,7 +3283,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/4FTDXnq5AcN4?ed=2048",
+        "path": "/59CIV9YwDyw2?ed=2048",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -3298,7 +3298,7 @@
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "transport": {
         "type": "ws",
-        "path": "/ihTG7F5dPXWi?ed=2560",
+        "path": "/sAdSstitx0cX?ed=2560",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -3309,7 +3309,7 @@
       "tag": "Domain9-TLS_2",
       "type": "vless",
       "server": "www.visa.com",
-      "server_port": 8443,
+      "server_port": 2083,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "tls": {
         "enabled": true,
@@ -3321,7 +3321,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/CpsBZo5ewaSf?ed=2048",
+        "path": "/iF4vvb9t0HpQ?ed=2048",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -3332,11 +3332,11 @@
       "tag": "Domain9-TCP",
       "type": "vless",
       "server": "www.visa.com",
-      "server_port": 2095,
+      "server_port": 2052,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "transport": {
         "type": "ws",
-        "path": "/qTcT2JYeftop?ed=2560",
+        "path": "/Hrz7RmxjisQT?ed=2560",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -3347,7 +3347,7 @@
       "tag": "Domain10-TLS_2",
       "type": "vless",
       "server": "www.wto.org",
-      "server_port": 8443,
+      "server_port": 2053,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "tls": {
         "enabled": true,
@@ -3359,7 +3359,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/TYTAYgdRV6cS?ed=2048",
+        "path": "/KHEtfD3kANA5?ed=2048",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -3370,11 +3370,11 @@
       "tag": "Domain10-TCP",
       "type": "vless",
       "server": "www.wto.org",
-      "server_port": 2052,
+      "server_port": 2082,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "transport": {
         "type": "ws",
-        "path": "/3WBLiZacxSIm?ed=2560",
+        "path": "/0nO8XLBvZRz7?ed=2560",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -3397,7 +3397,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/yOW2sDzONMZm?ed=2048",
+        "path": "/J9kAKgOH9tmW?ed=2048",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -3408,11 +3408,11 @@
       "tag": "Domain11-TCP",
       "type": "vless",
       "server": "chatgpt.com",
-      "server_port": 2052,
+      "server_port": 2086,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "transport": {
         "type": "ws",
-        "path": "/HnDm7UUrKKji?ed=2560",
+        "path": "/t3keB8mMVP8u?ed=2560",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -3435,7 +3435,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/swqyCHs6LJUo?ed=2048",
+        "path": "/KBMh0v6EGsQc?ed=2048",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -3446,11 +3446,11 @@
       "tag": "Domain12-TCP",
       "type": "vless",
       "server": "medium.com",
-      "server_port": 2052,
+      "server_port": 2082,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "transport": {
         "type": "ws",
-        "path": "/15uxylccic4W?ed=2560",
+        "path": "/WqMt5Tou9Rxi?ed=2560",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -3473,7 +3473,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/KWcfswJrcwSW?ed=2048",
+        "path": "/Gx6ChDkkrxvP?ed=2048",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -3484,11 +3484,11 @@
       "tag": "Domain13-TCP",
       "type": "vless",
       "server": "npmjs.com",
-      "server_port": 80,
+      "server_port": 2082,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "transport": {
         "type": "ws",
-        "path": "/fk3FzlV4ExWs?ed=2560",
+        "path": "/AlQQ3zPALKv4?ed=2560",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -3499,7 +3499,7 @@
       "tag": "Domain14-TLS_2",
       "type": "vless",
       "server": "nodejs.org",
-      "server_port": 2087,
+      "server_port": 2053,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "tls": {
         "enabled": true,
@@ -3511,7 +3511,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/VPmiMCU67Yoc?ed=2048",
+        "path": "/nv77JgElH6jM?ed=2048",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -3526,7 +3526,7 @@
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "transport": {
         "type": "ws",
-        "path": "/XPIbyFbMyPYJ?ed=2560",
+        "path": "/0fQWJERdfyFI?ed=2560",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -3537,448 +3537,6 @@
       "tag": "Domain15-TLS_2",
       "type": "vless",
       "server": "csgo.com",
-      "server_port": 8443,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "tls": {
-        "enabled": true,
-        "server_name": "zr-wasm.mah123-efc.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/Rvi5kLWXuh0Z?ed=2048",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain15-TCP",
-      "type": "vless",
-      "server": "csgo.com",
-      "server_port": 2082,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "transport": {
-        "type": "ws",
-        "path": "/GJKoGdWh6slD?ed=2560",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain16-TLS_2",
-      "type": "vless",
-      "server": "harbor.io",
-      "server_port": 443,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "tls": {
-        "enabled": true,
-        "server_name": "zr-wasm.mah123-efc.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/SesIuAi83NO7?ed=2048",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain16-TCP",
-      "type": "vless",
-      "server": "harbor.io",
-      "server_port": 2052,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "transport": {
-        "type": "ws",
-        "path": "/GWE4UczzMKx5?ed=2560",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain17-TLS_2",
-      "type": "vless",
-      "server": "linkerd.io",
-      "server_port": 2083,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "tls": {
-        "enabled": true,
-        "server_name": "zr-wasm.mah123-efc.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/ejTHBxwqADrw?ed=2048",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain17-TCP",
-      "type": "vless",
-      "server": "linkerd.io",
-      "server_port": 80,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "transport": {
-        "type": "ws",
-        "path": "/utqhAJnsPmvb?ed=2560",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain18-TLS_2",
-      "type": "vless",
-      "server": "fbi.gov",
-      "server_port": 2083,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "tls": {
-        "enabled": true,
-        "server_name": "zr-wasm.mah123-efc.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/f4pYDlhAOiR9?ed=2048",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain18-TCP",
-      "type": "vless",
-      "server": "fbi.gov",
-      "server_port": 2052,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "transport": {
-        "type": "ws",
-        "path": "/QUPQUarji574?ed=2560",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain19-TLS_2",
-      "type": "vless",
-      "server": "zula.ir",
-      "server_port": 2096,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "tls": {
-        "enabled": true,
-        "server_name": "zr-wasm.mah123-efc.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/JkOj3Rq6VzkW?ed=2048",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain19-TCP",
-      "type": "vless",
-      "server": "zula.ir",
-      "server_port": 2052,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "transport": {
-        "type": "ws",
-        "path": "/RyCP54yBTFzt?ed=2560",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "IP1-TLS_2",
-      "type": "vless",
-      "server": "104.26.4.154",
-      "server_port": 443,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "tls": {
-        "enabled": true,
-        "server_name": "zr-wasm.mah123-efc.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/lQJt6JdGPCtr?ed=2048",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP1-TCP",
-      "type": "vless",
-      "server": "104.26.4.154",
-      "server_port": 8880,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "transport": {
-        "type": "ws",
-        "path": "/hZD2crbdhbC4?ed=2560",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP2-TLS_2",
-      "type": "vless",
-      "server": "188.114.96.52",
-      "server_port": 2087,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "tls": {
-        "enabled": true,
-        "server_name": "zr-wasm.mah123-efc.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/AQ7ZfIKKBSsM?ed=2048",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP2-TCP",
-      "type": "vless",
-      "server": "188.114.96.52",
-      "server_port": 2052,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "transport": {
-        "type": "ws",
-        "path": "/jaHYNETMhvPM?ed=2560",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP3-TLS_2",
-      "type": "vless",
-      "server": "190.93.247.151",
-      "server_port": 8443,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "tls": {
-        "enabled": true,
-        "server_name": "zr-wasm.mah123-efc.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/Kn839IYIEgxe?ed=2048",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP3-TCP",
-      "type": "vless",
-      "server": "190.93.247.151",
-      "server_port": 2086,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "transport": {
-        "type": "ws",
-        "path": "/k01iHg4MUTZ7?ed=2560",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP4-TLS_2",
-      "type": "vless",
-      "server": "104.17.222.250",
-      "server_port": 443,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "tls": {
-        "enabled": true,
-        "server_name": "zr-wasm.mah123-efc.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/mk2vZwOe1bgL?ed=2048",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP4-TCP",
-      "type": "vless",
-      "server": "104.17.222.250",
-      "server_port": 2052,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "transport": {
-        "type": "ws",
-        "path": "/WFRsSR2r4YmQ?ed=2560",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP5-TLS_2",
-      "type": "vless",
-      "server": "172.67.138.167",
-      "server_port": 2083,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "tls": {
-        "enabled": true,
-        "server_name": "zr-wasm.mah123-efc.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/BpCZOkrcgIEg?ed=2048",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP5-TCP",
-      "type": "vless",
-      "server": "172.67.138.167",
-      "server_port": 80,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "transport": {
-        "type": "ws",
-        "path": "/EDVupeOpQHXe?ed=2560",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP6-TLS_2",
-      "type": "vless",
-      "server": "172.67.138.47",
-      "server_port": 2096,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "tls": {
-        "enabled": true,
-        "server_name": "zr-wasm.mah123-efc.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/160a44tgVYzd?ed=2048",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP6-TCP",
-      "type": "vless",
-      "server": "172.67.138.47",
-      "server_port": 2095,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "transport": {
-        "type": "ws",
-        "path": "/NpYUbmGfcaT4?ed=2560",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP7-TLS_2",
-      "type": "vless",
-      "server": "104.17.222.196",
-      "server_port": 8443,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "tls": {
-        "enabled": true,
-        "server_name": "zr-wasm.mah123-efc.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/vAvOMhq1WSel?ed=2048",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP7-TCP",
-      "type": "vless",
-      "server": "104.17.222.196",
-      "server_port": 2082,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "transport": {
-        "type": "ws",
-        "path": "/oIMUjanLe18A?ed=2560",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP8-TLS_2",
-      "type": "vless",
-      "server": "104.26.4.222",
       "server_port": 2053,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "tls": {
@@ -3991,138 +3549,32 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/MzKE9QoxhQ0p?ed=2048",
+        "path": "/kxlOf7VP5I2q?ed=2048",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
-      "tag": "IP8-TCP",
+      "tag": "Domain15-TCP",
       "type": "vless",
-      "server": "104.26.4.222",
+      "server": "csgo.com",
       "server_port": 2086,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "transport": {
         "type": "ws",
-        "path": "/8w8SwnMIOuy6?ed=2560",
+        "path": "/rSZk8iPl80T6?ed=2560",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP9-TLS_2",
-      "type": "vless",
-      "server": "188.114.99.60",
-      "server_port": 2087,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "tls": {
-        "enabled": true,
-        "server_name": "zr-wasm.mah123-efc.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
         }
       },
-      "transport": {
-        "type": "ws",
-        "path": "/ETrcBOb2kcE2?ed=2048",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      }
+      "domain_resolver": "dns-direct"
     },
     {
-      "tag": "IP9-TCP",
+      "tag": "Domain16-TLS_2",
       "type": "vless",
-      "server": "188.114.99.60",
-      "server_port": 8880,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "transport": {
-        "type": "ws",
-        "path": "/z6TJ9t6Y3tVj?ed=2560",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP10-TLS_2",
-      "type": "vless",
-      "server": "104.18.79.160",
-      "server_port": 8443,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "tls": {
-        "enabled": true,
-        "server_name": "zr-wasm.mah123-efc.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/KCVbRfKsIuo0?ed=2048",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP10-TCP",
-      "type": "vless",
-      "server": "104.18.79.160",
-      "server_port": 80,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "transport": {
-        "type": "ws",
-        "path": "/jaaGfOVB3qPT?ed=2560",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP11-TLS_2",
-      "type": "vless",
-      "server": "162.159.195.186",
-      "server_port": 2087,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "tls": {
-        "enabled": true,
-        "server_name": "zr-wasm.mah123-efc.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/vb6w0cRkiMfw?ed=2048",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP11-TCP",
-      "type": "vless",
-      "server": "162.159.195.186",
-      "server_port": 2086,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "transport": {
-        "type": "ws",
-        "path": "/SXz5n4p1QFL2?ed=2560",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP12-TLS_2",
-      "type": "vless",
-      "server": "8.6.112.102",
+      "server": "harbor.io",
       "server_port": 2083,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "tls": {
@@ -4135,30 +3587,108 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/54DlSBZD1t1z?ed=2048",
+        "path": "/NEY5HkhIcBW2?ed=2048",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
-      "tag": "IP12-TCP",
+      "tag": "Domain16-TCP",
       "type": "vless",
-      "server": "8.6.112.102",
+      "server": "harbor.io",
+      "server_port": 2086,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "transport": {
+        "type": "ws",
+        "path": "/0JGS9TDei8jd?ed=2560",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain17-TLS_2",
+      "type": "vless",
+      "server": "linkerd.io",
+      "server_port": 2096,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "tls": {
+        "enabled": true,
+        "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/xOa9vjQCoAqe?ed=2048",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain17-TCP",
+      "type": "vless",
+      "server": "linkerd.io",
       "server_port": 2052,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "transport": {
         "type": "ws",
-        "path": "/oG0kqyJDBSAn?ed=2560",
+        "path": "/7HA4b7QCOxgO?ed=2560",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
-      "tag": "IP13-TLS_2",
+      "tag": "Domain18-TLS_2",
       "type": "vless",
-      "server": "104.18.79.66",
+      "server": "fbi.gov",
+      "server_port": 2053,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "tls": {
+        "enabled": true,
+        "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gVHYVyEgeecy?ed=2048",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain18-TCP",
+      "type": "vless",
+      "server": "fbi.gov",
+      "server_port": 2086,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "transport": {
+        "type": "ws",
+        "path": "/9lHDq0jSHs2f?ed=2560",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain19-TLS_2",
+      "type": "vless",
+      "server": "zula.ir",
       "server_port": 2083,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "tls": {
@@ -4171,31 +3701,33 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/Dc1ist5900TY?ed=2048",
+        "path": "/KJBxC3xVF9sh?ed=2048",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
-      "tag": "IP13-TCP",
+      "tag": "Domain19-TCP",
       "type": "vless",
-      "server": "104.18.79.66",
-      "server_port": 2082,
+      "server": "zula.ir",
+      "server_port": 2095,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "transport": {
         "type": "ws",
-        "path": "/JvOl8aVuzGnp?ed=2560",
+        "path": "/FAtC6NFRcwzS?ed=2560",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
-      "tag": "IP14-TLS_2",
+      "tag": "IP1-TLS_2",
       "type": "vless",
-      "server": "172.64.146.81",
-      "server_port": 2087,
+      "server": "104.16.148.49",
+      "server_port": 2096,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "tls": {
         "enabled": true,
@@ -4207,102 +3739,30 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/WRimmBkPg62Y?ed=2048",
+        "path": "/7Y7DdeNNAoU2?ed=2048",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
       }
     },
     {
-      "tag": "IP14-TCP",
+      "tag": "IP1-TCP",
       "type": "vless",
-      "server": "172.64.146.81",
-      "server_port": 8880,
+      "server": "104.16.148.49",
+      "server_port": 2052,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "transport": {
         "type": "ws",
-        "path": "/0tOzw5bHrxxJ?ed=2560",
+        "path": "/jGZtmI6geZsy?ed=2560",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
       }
     },
     {
-      "tag": "IP15-TLS_2",
+      "tag": "IP2-TLS_2",
       "type": "vless",
-      "server": "104.26.4.213",
-      "server_port": 2083,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "tls": {
-        "enabled": true,
-        "server_name": "zr-wasm.mah123-efc.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/MzvvL1KMsIpu?ed=2048",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP15-TCP",
-      "type": "vless",
-      "server": "104.26.4.213",
-      "server_port": 8080,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "transport": {
-        "type": "ws",
-        "path": "/PteWUDPrT5ef?ed=2560",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP16-TLS_2",
-      "type": "vless",
-      "server": "104.20.6.95",
-      "server_port": 8443,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "tls": {
-        "enabled": true,
-        "server_name": "zr-wasm.mah123-efc.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/3u2y3obqaLKf?ed=2048",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP16-TCP",
-      "type": "vless",
-      "server": "104.20.6.95",
-      "server_port": 80,
-      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
-      "transport": {
-        "type": "ws",
-        "path": "/IZPahFOIYlh8?ed=2560",
-        "headers": {
-          "Host": "zr-wasm.mah123-efc.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP17-TLS_2",
-      "type": "vless",
-      "server": "162.159.243.109",
+      "server": "8.6.112.225",
       "server_port": 443,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "tls": {
@@ -4315,30 +3775,30 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/41TRZnDYXTIA?ed=2048",
+        "path": "/MLwh0Dj0oR9O?ed=2048",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
       }
     },
     {
-      "tag": "IP17-TCP",
+      "tag": "IP2-TCP",
       "type": "vless",
-      "server": "162.159.243.109",
-      "server_port": 80,
+      "server": "8.6.112.225",
+      "server_port": 2052,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "transport": {
         "type": "ws",
-        "path": "/K3VZ9IrA7OCH?ed=2560",
+        "path": "/rmZtgbeDtSht?ed=2560",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
       }
     },
     {
-      "tag": "IP18-TLS_2",
+      "tag": "IP3-TLS_2",
       "type": "vless",
-      "server": "104.20.29.216",
+      "server": "162.159.195.61",
       "server_port": 8443,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "tls": {
@@ -4351,30 +3811,30 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/J3eRRPEwlWvI?ed=2048",
+        "path": "/CEmDHa2rTvpx?ed=2048",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
       }
     },
     {
-      "tag": "IP18-TCP",
+      "tag": "IP3-TCP",
       "type": "vless",
-      "server": "104.20.29.216",
-      "server_port": 80,
+      "server": "162.159.195.61",
+      "server_port": 8080,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "transport": {
         "type": "ws",
-        "path": "/1dxgr2olTfYm?ed=2560",
+        "path": "/hha4OuBggUVF?ed=2560",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
       }
     },
     {
-      "tag": "IP19-TLS_2",
+      "tag": "IP4-TLS_2",
       "type": "vless",
-      "server": "172.66.147.10",
+      "server": "172.64.146.140",
       "server_port": 2087,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "tls": {
@@ -4387,30 +3847,354 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/1yyTEeKXdQTB?ed=2048",
+        "path": "/LhuNsbmXrLwi?ed=2048",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
       }
     },
     {
-      "tag": "IP19-TCP",
+      "tag": "IP4-TCP",
       "type": "vless",
-      "server": "172.66.147.10",
+      "server": "172.64.146.140",
+      "server_port": 2086,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "transport": {
+        "type": "ws",
+        "path": "/Qca7aFnn9UNZ?ed=2560",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP5-TLS_2",
+      "type": "vless",
+      "server": "172.64.146.230",
+      "server_port": 2053,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "tls": {
+        "enabled": true,
+        "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/I7hU83B9glws?ed=2048",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP5-TCP",
+      "type": "vless",
+      "server": "172.64.146.230",
+      "server_port": 8880,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "transport": {
+        "type": "ws",
+        "path": "/3Iptb1Sa4UwP?ed=2560",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP6-TLS_2",
+      "type": "vless",
+      "server": "172.64.146.112",
+      "server_port": 2053,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "tls": {
+        "enabled": true,
+        "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/XCNTA6BvHopg?ed=2048",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP6-TCP",
+      "type": "vless",
+      "server": "172.64.146.112",
+      "server_port": 2052,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "transport": {
+        "type": "ws",
+        "path": "/VohfCQ7FiDIK?ed=2560",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP7-TLS_2",
+      "type": "vless",
+      "server": "162.159.46.230",
+      "server_port": 2096,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "tls": {
+        "enabled": true,
+        "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/HU3xZd82DmNK?ed=2048",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP7-TCP",
+      "type": "vless",
+      "server": "162.159.46.230",
+      "server_port": 2052,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "transport": {
+        "type": "ws",
+        "path": "/b9IUNbpLGAco?ed=2560",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP8-TLS_2",
+      "type": "vless",
+      "server": "162.159.193.151",
+      "server_port": 443,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "tls": {
+        "enabled": true,
+        "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/LUdAcX2dDuzY?ed=2048",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP8-TCP",
+      "type": "vless",
+      "server": "162.159.193.151",
       "server_port": 8080,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "transport": {
         "type": "ws",
-        "path": "/bdu8Pnphqfa3?ed=2560",
+        "path": "/EG34lILQMtJS?ed=2560",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
       }
     },
     {
-      "tag": "IP20-TLS_2",
+      "tag": "IP9-TLS_2",
       "type": "vless",
-      "server": "190.93.247.211",
+      "server": "172.64.146.93",
+      "server_port": 2053,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "tls": {
+        "enabled": true,
+        "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/6EBmhHdn8Iow?ed=2048",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP9-TCP",
+      "type": "vless",
+      "server": "172.64.146.93",
+      "server_port": 2095,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "transport": {
+        "type": "ws",
+        "path": "/G7dOBwprQ2uN?ed=2560",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP10-TLS_2",
+      "type": "vless",
+      "server": "162.159.193.251",
+      "server_port": 2096,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "tls": {
+        "enabled": true,
+        "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/8waWMQNSlTwr?ed=2048",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP10-TCP",
+      "type": "vless",
+      "server": "162.159.193.251",
+      "server_port": 8880,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "transport": {
+        "type": "ws",
+        "path": "/D0JV8uILwsxg?ed=2560",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP11-TLS_2",
+      "type": "vless",
+      "server": "162.159.195.101",
+      "server_port": 443,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "tls": {
+        "enabled": true,
+        "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/pFmzTVZGJpXI?ed=2048",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP11-TCP",
+      "type": "vless",
+      "server": "162.159.195.101",
+      "server_port": 2095,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "transport": {
+        "type": "ws",
+        "path": "/FeOHeOBne6lP?ed=2560",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP12-TLS_2",
+      "type": "vless",
+      "server": "162.159.193.208",
+      "server_port": 2087,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "tls": {
+        "enabled": true,
+        "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/MakfBLLt4Bz2?ed=2048",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP12-TCP",
+      "type": "vless",
+      "server": "162.159.193.208",
+      "server_port": 2052,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "transport": {
+        "type": "ws",
+        "path": "/JlU5pGkPUU7U?ed=2560",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP13-TLS_2",
+      "type": "vless",
+      "server": "162.159.193.86",
+      "server_port": 2053,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "tls": {
+        "enabled": true,
+        "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gqi57nElwWrQ?ed=2048",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP13-TCP",
+      "type": "vless",
+      "server": "162.159.193.86",
+      "server_port": 80,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "transport": {
+        "type": "ws",
+        "path": "/gkUg7clyZDNq?ed=2560",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP14-TLS_2",
+      "type": "vless",
+      "server": "172.64.146.128",
       "server_port": 8443,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "tls": {
@@ -4423,7 +4207,223 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/ysZQqNWGp37i?ed=2048",
+        "path": "/Wc2Ag78gNyvc?ed=2048",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP14-TCP",
+      "type": "vless",
+      "server": "172.64.146.128",
+      "server_port": 2052,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "transport": {
+        "type": "ws",
+        "path": "/rQbPcupnZY8u?ed=2560",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP15-TLS_2",
+      "type": "vless",
+      "server": "162.159.193.130",
+      "server_port": 2083,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "tls": {
+        "enabled": true,
+        "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/7jP2cmwxTVxt?ed=2048",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP15-TCP",
+      "type": "vless",
+      "server": "162.159.193.130",
+      "server_port": 2095,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "transport": {
+        "type": "ws",
+        "path": "/jTa9HFZV2p72?ed=2560",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP16-TLS_2",
+      "type": "vless",
+      "server": "8.6.112.42",
+      "server_port": 2096,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "tls": {
+        "enabled": true,
+        "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/iHMmtU3w5oQz?ed=2048",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP16-TCP",
+      "type": "vless",
+      "server": "8.6.112.42",
+      "server_port": 2095,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "transport": {
+        "type": "ws",
+        "path": "/qJsbmTWvJa63?ed=2560",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP17-TLS_2",
+      "type": "vless",
+      "server": "8.6.112.130",
+      "server_port": 8443,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "tls": {
+        "enabled": true,
+        "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/rciqyQGVUxGn?ed=2048",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP17-TCP",
+      "type": "vless",
+      "server": "8.6.112.130",
+      "server_port": 2082,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "transport": {
+        "type": "ws",
+        "path": "/iVECmWrJcZuh?ed=2560",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP18-TLS_2",
+      "type": "vless",
+      "server": "104.16.140.43",
+      "server_port": 2053,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "tls": {
+        "enabled": true,
+        "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/IIVeuZUYQd2N?ed=2048",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP18-TCP",
+      "type": "vless",
+      "server": "104.16.140.43",
+      "server_port": 2086,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "transport": {
+        "type": "ws",
+        "path": "/oCcDcPHwfxux?ed=2560",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP19-TLS_2",
+      "type": "vless",
+      "server": "104.16.140.5",
+      "server_port": 443,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "tls": {
+        "enabled": true,
+        "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/7TFFWtUMm0iH?ed=2048",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP19-TCP",
+      "type": "vless",
+      "server": "104.16.140.5",
+      "server_port": 2095,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "transport": {
+        "type": "ws",
+        "path": "/8xmZzDbnsvxe?ed=2560",
+        "headers": {
+          "Host": "zr-wasm.mah123-efc.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP20-TLS_2",
+      "type": "vless",
+      "server": "162.159.195.197",
+      "server_port": 2053,
+      "uuid": "d95060e5-39df-4105-8266-a3119f877588",
+      "tls": {
+        "enabled": true,
+        "server_name": "zr-wasm.mah123-efc.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/xf3Uo65ckxoF?ed=2048",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -4432,12 +4432,12 @@
     {
       "tag": "IP20-TCP",
       "type": "vless",
-      "server": "190.93.247.211",
-      "server_port": 8080,
+      "server": "162.159.195.197",
+      "server_port": 2086,
       "uuid": "d95060e5-39df-4105-8266-a3119f877588",
       "transport": {
         "type": "ws",
-        "path": "/xCraILL0KCqZ?ed=2560",
+        "path": "/UFWxqzexD5Mb?ed=2560",
         "headers": {
           "Host": "zr-wasm.mah123-efc.workers.dev"
         }
@@ -4702,7 +4702,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/64jbXSVsUOY8?ed=2048",
+        "path": "/tLhxzfa05J79?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -4713,7 +4713,7 @@
       "tag": "Domain2-TLS_3",
       "type": "vless",
       "server": "creativecommons.org",
-      "server_port": 2096,
+      "server_port": 2087,
       "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
       "tls": {
         "enabled": true,
@@ -4725,7 +4725,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/YhvpnJSkWnw4?ed=2048",
+        "path": "/CedUhEtlWUoC?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -4736,7 +4736,7 @@
       "tag": "Domain3-TLS_3",
       "type": "vless",
       "server": "sky.rethinkdns.com",
-      "server_port": 8443,
+      "server_port": 2053,
       "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
       "tls": {
         "enabled": true,
@@ -4748,7 +4748,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/8oRXDM65PM9n?ed=2048",
+        "path": "/vCjWw7xSNKLW?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -4759,7 +4759,7 @@
       "tag": "Domain4-TLS_3",
       "type": "vless",
       "server": "www.speedtest.net",
-      "server_port": 2096,
+      "server_port": 2083,
       "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
       "tls": {
         "enabled": true,
@@ -4771,7 +4771,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/oRP4eUpUYiAN?ed=2048",
+        "path": "/aVd2r0B7Coi3?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -4782,7 +4782,7 @@
       "tag": "Domain5-TLS_3",
       "type": "vless",
       "server": "singapore.com",
-      "server_port": 2096,
+      "server_port": 2083,
       "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
       "tls": {
         "enabled": true,
@@ -4794,7 +4794,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/VijWPMF4b9gJ?ed=2048",
+        "path": "/Bu5auTz5Ynax?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -4805,52 +4805,6 @@
       "tag": "Domain6-TLS_3",
       "type": "vless",
       "server": "go.inmobi.com",
-      "server_port": 2083,
-      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/OBTL5EarCs2x?ed=2048",
-        "headers": {
-          "Host": "zizijavid1.mahdijavid3800.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain7-TLS_3",
-      "type": "vless",
-      "server": "www.visa.com",
-      "server_port": 2083,
-      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/Z2BQJnlILz6X?ed=2048",
-        "headers": {
-          "Host": "zizijavid1.mahdijavid3800.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain8-TLS_3",
-      "type": "vless",
-      "server": "www.wto.org",
       "server_port": 443,
       "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
       "tls": {
@@ -4863,7 +4817,53 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/0gx4pde6kXh3?ed=2048",
+        "path": "/iN3q8Ul9JCJG?ed=2048",
+        "headers": {
+          "Host": "zizijavid1.mahdijavid3800.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain7-TLS_3",
+      "type": "vless",
+      "server": "www.visa.com",
+      "server_port": 443,
+      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/qRPx2xC2oqMT?ed=2048",
+        "headers": {
+          "Host": "zizijavid1.mahdijavid3800.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain8-TLS_3",
+      "type": "vless",
+      "server": "www.wto.org",
+      "server_port": 2053,
+      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/Tje6voOjIvqC?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -4874,6 +4874,29 @@
       "tag": "Domain9-TLS_3",
       "type": "vless",
       "server": "chatgpt.com",
+      "server_port": 443,
+      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/RD4dXgBeCgC7?ed=2048",
+        "headers": {
+          "Host": "zizijavid1.mahdijavid3800.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain10-TLS_3",
+      "type": "vless",
+      "server": "medium.com",
       "server_port": 8443,
       "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
       "tls": {
@@ -4886,30 +4909,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/d02EMGtAX0Tf?ed=2048",
-        "headers": {
-          "Host": "zizijavid1.mahdijavid3800.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain10-TLS_3",
-      "type": "vless",
-      "server": "medium.com",
-      "server_port": 2053,
-      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/U4B2wdwCmAU7?ed=2048",
+        "path": "/KETUkXkjTEJK?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -4920,7 +4920,7 @@
       "tag": "Domain11-TLS_3",
       "type": "vless",
       "server": "lb.nscl.ir",
-      "server_port": 2053,
+      "server_port": 2087,
       "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
       "tls": {
         "enabled": true,
@@ -4932,7 +4932,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/0kOE7FyX9cCz?ed=2048",
+        "path": "/8cEQgyT2aXfT?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -4943,7 +4943,7 @@
       "tag": "Domain12-TLS_3",
       "type": "vless",
       "server": "nodejs.org",
-      "server_port": 2096,
+      "server_port": 8443,
       "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
       "tls": {
         "enabled": true,
@@ -4955,7 +4955,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/QiIMEVz9eH2M?ed=2048",
+        "path": "/XbRj7J07oBwS?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -4966,7 +4966,7 @@
       "tag": "Domain13-TLS_3",
       "type": "vless",
       "server": "linkerd.io",
-      "server_port": 443,
+      "server_port": 8443,
       "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
       "tls": {
         "enabled": true,
@@ -4978,7 +4978,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/hRmsSpmU7IXc?ed=2048",
+        "path": "/4i62xI3Efoao?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -5001,7 +5001,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/xvIHyvylGjtg?ed=2048",
+        "path": "/ZfU2tRjq4Bnu?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -5012,7 +5012,7 @@
       "tag": "Domain15-TLS_3",
       "type": "vless",
       "server": "npmjs.com",
-      "server_port": 8443,
+      "server_port": 2096,
       "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
       "tls": {
         "enabled": true,
@@ -5024,7 +5024,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/srKcLyy1VC2s?ed=2048",
+        "path": "/w1vUP9ZGpCtu?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -5047,7 +5047,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/sOn1t4xXFz9T?ed=2048",
+        "path": "/XMENm9r9KAKw?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -5058,7 +5058,7 @@
       "tag": "Domain17-TLS_3",
       "type": "vless",
       "server": "fbi.gov",
-      "server_port": 2087,
+      "server_port": 8443,
       "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
       "tls": {
         "enabled": true,
@@ -5070,7 +5070,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/zaISYls2efes?ed=2048",
+        "path": "/nVCfsUWYRPWP?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -5081,98 +5081,6 @@
       "tag": "Domain18-TLS_3",
       "type": "vless",
       "server": "ip.sb",
-      "server_port": 8443,
-      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/pIkRkgSwK6Zj?ed=2048",
-        "headers": {
-          "Host": "zizijavid1.mahdijavid3800.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain19-TLS_3",
-      "type": "vless",
-      "server": "time.is",
-      "server_port": 8443,
-      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/5TH2IYjjUC62?ed=2048",
-        "headers": {
-          "Host": "zizijavid1.mahdijavid3800.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain20-TLS_2",
-      "type": "vless",
-      "server": "icook.hk",
-      "server_port": 443,
-      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/IRMLGD10I2Ld?ed=2048",
-        "headers": {
-          "Host": "zizijavid1.mahdijavid3800.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain21-TLS_2",
-      "type": "vless",
-      "server": "codepen.io",
-      "server_port": 8443,
-      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/dWDUpBStFHht?ed=2048",
-        "headers": {
-          "Host": "zizijavid1.mahdijavid3800.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain22-TLS_2",
-      "type": "vless",
-      "server": "unpkg.com",
       "server_port": 2087,
       "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
       "tls": {
@@ -5185,7 +5093,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/mGT4Svwziqzm?ed=2048",
+        "path": "/ZLJAbr8VU7py?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -5193,9 +5101,78 @@
       "domain_resolver": "dns-direct"
     },
     {
-      "tag": "Domain23-TLS_2",
+      "tag": "Domain19-TLS_3",
       "type": "vless",
-      "server": "jsdelivr.com",
+      "server": "time.is",
+      "server_port": 2087,
+      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/dlSXhD2JVYAB?ed=2048",
+        "headers": {
+          "Host": "zizijavid1.mahdijavid3800.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain20-TLS_2",
+      "type": "vless",
+      "server": "icook.hk",
+      "server_port": 2083,
+      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/RuRDtL2RoBtm?ed=2048",
+        "headers": {
+          "Host": "zizijavid1.mahdijavid3800.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain21-TLS_2",
+      "type": "vless",
+      "server": "codepen.io",
+      "server_port": 2087,
+      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/AHRvKYcZzv9c?ed=2048",
+        "headers": {
+          "Host": "zizijavid1.mahdijavid3800.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain22-TLS_2",
+      "type": "vless",
+      "server": "unpkg.com",
       "server_port": 8443,
       "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
       "tls": {
@@ -5208,7 +5185,30 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/YBWjSqkuyBc0?ed=2048",
+        "path": "/90jW4z3vzUAY?ed=2048",
+        "headers": {
+          "Host": "zizijavid1.mahdijavid3800.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain23-TLS_2",
+      "type": "vless",
+      "server": "jsdelivr.com",
+      "server_port": 2083,
+      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/VnNR5DOuRtS4?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -5231,7 +5231,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/wV9U0FaQOHXd?ed=2048",
+        "path": "/zsRglQf078pY?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -5242,6 +5242,29 @@
       "tag": "Domain25-TLS_2",
       "type": "vless",
       "server": "www.cdnjs.com",
+      "server_port": 2096,
+      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/cqyX3GJgxQbH?ed=2048",
+        "headers": {
+          "Host": "zizijavid1.mahdijavid3800.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain26-TLS_2",
+      "type": "vless",
+      "server": "auth.vercel.com",
       "server_port": 2087,
       "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
       "tls": {
@@ -5254,30 +5277,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/5JfyKfkSZBth?ed=2048",
-        "headers": {
-          "Host": "zizijavid1.mahdijavid3800.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain26-TLS_2",
-      "type": "vless",
-      "server": "auth.vercel.com",
-      "server_port": 2053,
-      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/lmmGj2BILHUa?ed=2048",
+        "path": "/9VFgyQSxAXHR?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -5288,7 +5288,7 @@
       "tag": "Domain27-TLS_2",
       "type": "vless",
       "server": "www.udacity.com",
-      "server_port": 2096,
+      "server_port": 2087,
       "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
       "tls": {
         "enabled": true,
@@ -5300,7 +5300,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/1TWEaQwW4N1I?ed=2048",
+        "path": "/NTVdOUe35FkF?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -5311,6 +5311,52 @@
       "tag": "Domain28-TLS_2",
       "type": "vless",
       "server": "www.gitbook.com",
+      "server_port": 2087,
+      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/GF3EEsJ0MCjQ?ed=2048",
+        "headers": {
+          "Host": "zizijavid1.mahdijavid3800.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain29-TLS_2",
+      "type": "vless",
+      "server": "www.ipaddress.my",
+      "server_port": 8443,
+      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/c8bZfYiCcTwP?ed=2048",
+        "headers": {
+          "Host": "zizijavid1.mahdijavid3800.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain30-TLS_2",
+      "type": "vless",
+      "server": "www.glassdoor.com",
       "server_port": 2053,
       "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
       "tls": {
@@ -5323,7 +5369,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/7QH5RFe57ZIT?ed=2048",
+        "path": "/WorID3zRH2qZ?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -5331,9 +5377,9 @@
       "domain_resolver": "dns-direct"
     },
     {
-      "tag": "Domain29-TLS_2",
+      "tag": "Domain31-TLS_2",
       "type": "vless",
-      "server": "www.ipaddress.my",
+      "server": "www.ipchicken.com",
       "server_port": 2083,
       "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
       "tls": {
@@ -5346,53 +5392,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/IM18WKP1Ah4Z?ed=2048",
-        "headers": {
-          "Host": "zizijavid1.mahdijavid3800.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain30-TLS_2",
-      "type": "vless",
-      "server": "www.glassdoor.com",
-      "server_port": 2096,
-      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/1KRkoKU4xlO7?ed=2048",
-        "headers": {
-          "Host": "zizijavid1.mahdijavid3800.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain31-TLS_2",
-      "type": "vless",
-      "server": "www.ipchicken.com",
-      "server_port": 2053,
-      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/2URsK0eEaHB9?ed=2048",
+        "path": "/tSY7LFwY585G?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -5415,7 +5415,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/ClqJfDpOEY98?ed=2048",
+        "path": "/7myTHXFcAcT6?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -5426,50 +5426,6 @@
       "tag": "IP1-TLS_3",
       "type": "vless",
       "server": "104.26.4.66",
-      "server_port": 2087,
-      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/8cPOh36q8gW7?ed=2048",
-        "headers": {
-          "Host": "zizijavid1.mahdijavid3800.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP2-TLS_3",
-      "type": "vless",
-      "server": "104.17.222.45",
-      "server_port": 2083,
-      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/CxzWrOzRGmxX?ed=2048",
-        "headers": {
-          "Host": "zizijavid1.mahdijavid3800.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP3-TLS_3",
-      "type": "vless",
-      "server": "104.20.6.217",
       "server_port": 8443,
       "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
       "tls": {
@@ -5482,17 +5438,17 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/E608JKZUz7eX?ed=2048",
+        "path": "/Z3rEk1HyVsCb?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
       }
     },
     {
-      "tag": "IP4-TLS_3",
+      "tag": "IP2-TLS_3",
       "type": "vless",
-      "server": "104.17.222.216",
-      "server_port": 2083,
+      "server": "104.17.222.45",
+      "server_port": 2096,
       "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
       "tls": {
         "enabled": true,
@@ -5504,7 +5460,51 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/BNEnhmrkNvoc?ed=2048",
+        "path": "/mkm7WFgk87nn?ed=2048",
+        "headers": {
+          "Host": "zizijavid1.mahdijavid3800.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP3-TLS_3",
+      "type": "vless",
+      "server": "104.20.6.217",
+      "server_port": 2096,
+      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/MeCOIlxoM9tz?ed=2048",
+        "headers": {
+          "Host": "zizijavid1.mahdijavid3800.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP4-TLS_3",
+      "type": "vless",
+      "server": "104.17.222.216",
+      "server_port": 2087,
+      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/uRrOxiS4EFpG?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -5526,7 +5526,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/x3k0A8IXKeax?ed=2048",
+        "path": "/xdaq7OFCZzI8?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -5548,7 +5548,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/iWJxYVuQh4Vk?ed=2048",
+        "path": "/yNMxPHPLUaDg?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -5558,7 +5558,7 @@
       "tag": "IP7-TLS_3",
       "type": "vless",
       "server": "104.16.92.40",
-      "server_port": 8443,
+      "server_port": 2096,
       "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
       "tls": {
         "enabled": true,
@@ -5570,7 +5570,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/ueAGjOA8JSqA?ed=2048",
+        "path": "/JP28jA4exQ3X?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -5580,6 +5580,28 @@
       "tag": "IP8-TLS_3",
       "type": "vless",
       "server": "141.101.115.9",
+      "server_port": 2083,
+      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/LQ7Ll7VYTDmw?ed=2048",
+        "headers": {
+          "Host": "zizijavid1.mahdijavid3800.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP9-TLS_3",
+      "type": "vless",
+      "server": "104.26.4.30",
       "server_port": 2087,
       "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
       "tls": {
@@ -5592,29 +5614,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/V8iAOxN7jlDZ?ed=2048",
-        "headers": {
-          "Host": "zizijavid1.mahdijavid3800.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP9-TLS_3",
-      "type": "vless",
-      "server": "104.26.4.30",
-      "server_port": 2083,
-      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/v82NVrLv6EyE?ed=2048",
+        "path": "/fTWhjP6afjx5?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -5624,7 +5624,7 @@
       "tag": "IP10-TLS_3",
       "type": "vless",
       "server": "104.18.79.210",
-      "server_port": 2083,
+      "server_port": 443,
       "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
       "tls": {
         "enabled": true,
@@ -5636,7 +5636,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/NFPtdXRLbfTm?ed=2048",
+        "path": "/5Ckfv5JTM62k?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -5646,116 +5646,6 @@
       "tag": "IP11-TLS_3",
       "type": "vless",
       "server": "190.93.245.48",
-      "server_port": 443,
-      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/Q8wEdVlAbxUS?ed=2048",
-        "headers": {
-          "Host": "zizijavid1.mahdijavid3800.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP12-TLS_3",
-      "type": "vless",
-      "server": "104.27.196.57",
-      "server_port": 2096,
-      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/M7pdGUHGaCeA?ed=2048",
-        "headers": {
-          "Host": "zizijavid1.mahdijavid3800.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP13-TLS_3",
-      "type": "vless",
-      "server": "104.18.79.88",
-      "server_port": 443,
-      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/NlSzp2AeDZlr?ed=2048",
-        "headers": {
-          "Host": "zizijavid1.mahdijavid3800.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP14-TLS_3",
-      "type": "vless",
-      "server": "8.6.112.63",
-      "server_port": 2096,
-      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/X80TFz3DfPYy?ed=2048",
-        "headers": {
-          "Host": "zizijavid1.mahdijavid3800.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP15-TLS_3",
-      "type": "vless",
-      "server": "104.27.196.20",
-      "server_port": 2083,
-      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/gSuJhpLMaXlB?ed=2048",
-        "headers": {
-          "Host": "zizijavid1.mahdijavid3800.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP16-TLS_3",
-      "type": "vless",
-      "server": "190.93.245.178",
       "server_port": 2053,
       "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
       "tls": {
@@ -5768,7 +5658,117 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/mHbKRJ7Emn9t?ed=2048",
+        "path": "/Zid7wrpj9zyi?ed=2048",
+        "headers": {
+          "Host": "zizijavid1.mahdijavid3800.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP12-TLS_3",
+      "type": "vless",
+      "server": "104.27.196.57",
+      "server_port": 8443,
+      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/aoUPV2CA3REj?ed=2048",
+        "headers": {
+          "Host": "zizijavid1.mahdijavid3800.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP13-TLS_3",
+      "type": "vless",
+      "server": "104.18.79.88",
+      "server_port": 2083,
+      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/KeM8opkNlSnw?ed=2048",
+        "headers": {
+          "Host": "zizijavid1.mahdijavid3800.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP14-TLS_3",
+      "type": "vless",
+      "server": "8.6.112.63",
+      "server_port": 2083,
+      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/CXrhkDWnbEHN?ed=2048",
+        "headers": {
+          "Host": "zizijavid1.mahdijavid3800.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP15-TLS_3",
+      "type": "vless",
+      "server": "104.27.196.20",
+      "server_port": 2053,
+      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/O9M2nl4PrUM5?ed=2048",
+        "headers": {
+          "Host": "zizijavid1.mahdijavid3800.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP16-TLS_3",
+      "type": "vless",
+      "server": "190.93.245.178",
+      "server_port": 8443,
+      "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizijavid1.mahdijavid3800.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/eYCoBL6QKylV?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -5778,7 +5778,7 @@
       "tag": "IP17-TLS_3",
       "type": "vless",
       "server": "104.17.222.118",
-      "server_port": 2096,
+      "server_port": 2083,
       "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
       "tls": {
         "enabled": true,
@@ -5790,7 +5790,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/fJhCZY7banTa?ed=2048",
+        "path": "/p9zXai3HMANB?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -5800,7 +5800,7 @@
       "tag": "IP18-TLS_3",
       "type": "vless",
       "server": "141.101.115.78",
-      "server_port": 2096,
+      "server_port": 443,
       "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
       "tls": {
         "enabled": true,
@@ -5812,7 +5812,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/rDszxiTigYQZ?ed=2048",
+        "path": "/MtZELLeqpu3l?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -5834,7 +5834,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/kDbLY4dmxecN?ed=2048",
+        "path": "/eNI0s7YOPWFc?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -5844,7 +5844,7 @@
       "tag": "IP20-TLS_3",
       "type": "vless",
       "server": "162.159.193.17",
-      "server_port": 2083,
+      "server_port": 8443,
       "uuid": "b302ae2e-4adf-40ae-b302-2b7bd2ea32fb",
       "tls": {
         "enabled": true,
@@ -5856,7 +5856,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/iMpwjYm9QMIs?ed=2048",
+        "path": "/SzEQR82ZHBn6?ed=2048",
         "headers": {
           "Host": "zizijavid1.mahdijavid3800.workers.dev"
         }
@@ -5866,7 +5866,7 @@
       "tag": "Domain1-TLS_4",
       "type": "vless",
       "server": "zizifnjavid.foreverstar1356.workers.dev",
-      "server_port": 443,
+      "server_port": 2053,
       "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
       "tls": {
         "enabled": true,
@@ -5878,7 +5878,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/wIrm4OF5sxG6?ed=2048",
+        "path": "/0vUYlG8LIN0v?ed=2048",
         "headers": {
           "Host": "zizifnjavid.foreverstar1356.workers.dev"
         }
@@ -5901,7 +5901,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/B8vFVfLxZlE3?ed=2048",
+        "path": "/BEEI0ZunMMd0?ed=2048",
         "headers": {
           "Host": "zizifnjavid.foreverstar1356.workers.dev"
         }
@@ -5912,6 +5912,29 @@
       "tag": "Domain3-TLS_4",
       "type": "vless",
       "server": "sky.rethinkdns.com",
+      "server_port": 2053,
+      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/1n9dxkWhOU0e?ed=2048",
+        "headers": {
+          "Host": "zizifnjavid.foreverstar1356.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain4-TLS_4",
+      "type": "vless",
+      "server": "www.speedtest.net",
       "server_port": 443,
       "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
       "tls": {
@@ -5924,30 +5947,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/hh1Yztn6RpP6?ed=2048",
-        "headers": {
-          "Host": "zizifnjavid.foreverstar1356.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain4-TLS_4",
-      "type": "vless",
-      "server": "www.speedtest.net",
-      "server_port": 2096,
-      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/zCehuauE6ELp?ed=2048",
+        "path": "/y60G49altssl?ed=2048",
         "headers": {
           "Host": "zizifnjavid.foreverstar1356.workers.dev"
         }
@@ -5970,7 +5970,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/mrQJDEgtZC0a?ed=2048",
+        "path": "/h1D8Ozckr7D2?ed=2048",
         "headers": {
           "Host": "zizifnjavid.foreverstar1356.workers.dev"
         }
@@ -5981,7 +5981,7 @@
       "tag": "Domain6-TLS_4",
       "type": "vless",
       "server": "go.inmobi.com",
-      "server_port": 2053,
+      "server_port": 8443,
       "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
       "tls": {
         "enabled": true,
@@ -5993,7 +5993,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/efWFDHi4N2kq?ed=2048",
+        "path": "/ec8CTe40LQbI?ed=2048",
         "headers": {
           "Host": "zizifnjavid.foreverstar1356.workers.dev"
         }
@@ -6004,7 +6004,7 @@
       "tag": "Domain7-TLS_4",
       "type": "vless",
       "server": "www.visa.com",
-      "server_port": 2087,
+      "server_port": 443,
       "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
       "tls": {
         "enabled": true,
@@ -6016,7 +6016,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/CHcD1l6wWhoP?ed=2048",
+        "path": "/JN3NB6MWXaU5?ed=2048",
         "headers": {
           "Host": "zizifnjavid.foreverstar1356.workers.dev"
         }
@@ -6039,7 +6039,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/Zaq58A1KdNu4?ed=2048",
+        "path": "/NGyF7Zl8pDkE?ed=2048",
         "headers": {
           "Host": "zizifnjavid.foreverstar1356.workers.dev"
         }
@@ -6062,7 +6062,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/nGp7SGpgbZaz?ed=2048",
+        "path": "/GeqKfFtegAGN?ed=2048",
         "headers": {
           "Host": "zizifnjavid.foreverstar1356.workers.dev"
         }
@@ -6073,98 +6073,6 @@
       "tag": "Domain10-TLS_4",
       "type": "vless",
       "server": "medium.com",
-      "server_port": 2083,
-      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/ukxMbItsxVlR?ed=2048",
-        "headers": {
-          "Host": "zizifnjavid.foreverstar1356.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain11-TLS_4",
-      "type": "vless",
-      "server": "lb.nscl.ir",
-      "server_port": 2096,
-      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/MHuIX5qVD0lB?ed=2048",
-        "headers": {
-          "Host": "zizifnjavid.foreverstar1356.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain12-TLS_4",
-      "type": "vless",
-      "server": "nodejs.org",
-      "server_port": 2087,
-      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/IVZsPtlCqsED?ed=2048",
-        "headers": {
-          "Host": "zizifnjavid.foreverstar1356.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain13-TLS_4",
-      "type": "vless",
-      "server": "linkerd.io",
-      "server_port": 2083,
-      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/bayG5WZBkd8S?ed=2048",
-        "headers": {
-          "Host": "zizifnjavid.foreverstar1356.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain14-TLS_4",
-      "type": "vless",
-      "server": "harbor.io",
       "server_port": 2053,
       "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
       "tls": {
@@ -6177,7 +6085,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/zhN88lWRS99D?ed=2048",
+        "path": "/51WHxJNyjFZC?ed=2048",
         "headers": {
           "Host": "zizifnjavid.foreverstar1356.workers.dev"
         }
@@ -6185,55 +6093,9 @@
       "domain_resolver": "dns-direct"
     },
     {
-      "tag": "Domain15-TLS_4",
+      "tag": "Domain11-TLS_4",
       "type": "vless",
-      "server": "npmjs.com",
-      "server_port": 443,
-      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/G7v8pFreHVPE?ed=2048",
-        "headers": {
-          "Host": "zizifnjavid.foreverstar1356.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain16-TLS_4",
-      "type": "vless",
-      "server": "csgo.com",
-      "server_port": 2087,
-      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/iFN5KMigg0VB?ed=2048",
-        "headers": {
-          "Host": "zizifnjavid.foreverstar1356.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain17-TLS_4",
-      "type": "vless",
-      "server": "fbi.gov",
+      "server": "lb.nscl.ir",
       "server_port": 8443,
       "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
       "tls": {
@@ -6246,7 +6108,145 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/8OBmNzUX4hrR?ed=2048",
+        "path": "/LSNXlrS9HbYp?ed=2048",
+        "headers": {
+          "Host": "zizifnjavid.foreverstar1356.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain12-TLS_4",
+      "type": "vless",
+      "server": "nodejs.org",
+      "server_port": 2053,
+      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/RTNzmNaLrHKu?ed=2048",
+        "headers": {
+          "Host": "zizifnjavid.foreverstar1356.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain13-TLS_4",
+      "type": "vless",
+      "server": "linkerd.io",
+      "server_port": 2087,
+      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/Iu7q032HdIz9?ed=2048",
+        "headers": {
+          "Host": "zizifnjavid.foreverstar1356.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain14-TLS_4",
+      "type": "vless",
+      "server": "harbor.io",
+      "server_port": 8443,
+      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/iSgQ2RC13clv?ed=2048",
+        "headers": {
+          "Host": "zizifnjavid.foreverstar1356.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain15-TLS_4",
+      "type": "vless",
+      "server": "npmjs.com",
+      "server_port": 2083,
+      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/8FYr2ALZKiKw?ed=2048",
+        "headers": {
+          "Host": "zizifnjavid.foreverstar1356.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain16-TLS_4",
+      "type": "vless",
+      "server": "csgo.com",
+      "server_port": 2083,
+      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/QroRaxOymTIq?ed=2048",
+        "headers": {
+          "Host": "zizifnjavid.foreverstar1356.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain17-TLS_4",
+      "type": "vless",
+      "server": "fbi.gov",
+      "server_port": 2053,
+      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/x26YDwmN2Z8n?ed=2048",
         "headers": {
           "Host": "zizifnjavid.foreverstar1356.workers.dev"
         }
@@ -6269,7 +6269,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/zyNXZgYdTmOL?ed=2048",
+        "path": "/pn85KwUFE1yw?ed=2048",
         "headers": {
           "Host": "zizifnjavid.foreverstar1356.workers.dev"
         }
@@ -6280,7 +6280,7 @@
       "tag": "Domain19-TLS_4",
       "type": "vless",
       "server": "time.is",
-      "server_port": 2053,
+      "server_port": 2096,
       "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
       "tls": {
         "enabled": true,
@@ -6292,7 +6292,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/1DPv18Mrh8TW?ed=2048",
+        "path": "/oNXyEtU6UPTM?ed=2048",
         "headers": {
           "Host": "zizifnjavid.foreverstar1356.workers.dev"
         }
@@ -6303,7 +6303,7 @@
       "tag": "Domain20-TLS_3",
       "type": "vless",
       "server": "icook.hk",
-      "server_port": 2083,
+      "server_port": 2096,
       "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
       "tls": {
         "enabled": true,
@@ -6315,7 +6315,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/YzNc59eXQ4F2?ed=2048",
+        "path": "/duerfGKy9zuh?ed=2048",
         "headers": {
           "Host": "zizifnjavid.foreverstar1356.workers.dev"
         }
@@ -6326,98 +6326,6 @@
       "tag": "Domain21-TLS_3",
       "type": "vless",
       "server": "codepen.io",
-      "server_port": 2087,
-      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/FefyTRR1KoBh?ed=2048",
-        "headers": {
-          "Host": "zizifnjavid.foreverstar1356.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain22-TLS_3",
-      "type": "vless",
-      "server": "unpkg.com",
-      "server_port": 2053,
-      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/XxxnddFRA064?ed=2048",
-        "headers": {
-          "Host": "zizifnjavid.foreverstar1356.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain23-TLS_3",
-      "type": "vless",
-      "server": "jsdelivr.com",
-      "server_port": 2087,
-      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/gUjOvgxnQRUm?ed=2048",
-        "headers": {
-          "Host": "zizifnjavid.foreverstar1356.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain24-TLS_3",
-      "type": "vless",
-      "server": "www.cdnjs.com",
-      "server_port": 2083,
-      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/nYgE23PVkTTp?ed=2048",
-        "headers": {
-          "Host": "zizifnjavid.foreverstar1356.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain25-TLS_3",
-      "type": "vless",
-      "server": "auth.vercel.com",
       "server_port": 443,
       "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
       "tls": {
@@ -6430,7 +6338,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/XOGhKdTqehhx?ed=2048",
+        "path": "/QtTRFS9NGZeK?ed=2048",
         "headers": {
           "Host": "zizifnjavid.foreverstar1356.workers.dev"
         }
@@ -6438,9 +6346,32 @@
       "domain_resolver": "dns-direct"
     },
     {
-      "tag": "Domain26-TLS_3",
+      "tag": "Domain22-TLS_3",
       "type": "vless",
-      "server": "www.udacity.com",
+      "server": "unpkg.com",
+      "server_port": 2096,
+      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/1ssgt7HglHN6?ed=2048",
+        "headers": {
+          "Host": "zizifnjavid.foreverstar1356.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain23-TLS_3",
+      "type": "vless",
+      "server": "jsdelivr.com",
       "server_port": 2053,
       "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
       "tls": {
@@ -6453,7 +6384,76 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/F85wZwmJsfar?ed=2048",
+        "path": "/YV8wBC731sBu?ed=2048",
+        "headers": {
+          "Host": "zizifnjavid.foreverstar1356.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain24-TLS_3",
+      "type": "vless",
+      "server": "www.cdnjs.com",
+      "server_port": 2096,
+      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/wJmEstAWYBAC?ed=2048",
+        "headers": {
+          "Host": "zizifnjavid.foreverstar1356.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain25-TLS_3",
+      "type": "vless",
+      "server": "auth.vercel.com",
+      "server_port": 2096,
+      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/8IZVegBgefwI?ed=2048",
+        "headers": {
+          "Host": "zizifnjavid.foreverstar1356.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain26-TLS_3",
+      "type": "vless",
+      "server": "www.udacity.com",
+      "server_port": 2083,
+      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/EQ5XWqLEpH13?ed=2048",
         "headers": {
           "Host": "zizifnjavid.foreverstar1356.workers.dev"
         }
@@ -6476,7 +6476,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/oVnR1hbR1yWY?ed=2048",
+        "path": "/tVe5sEYhnFTT?ed=2048",
         "headers": {
           "Host": "zizifnjavid.foreverstar1356.workers.dev"
         }
@@ -6487,6 +6487,29 @@
       "tag": "Domain28-TLS_3",
       "type": "vless",
       "server": "www.ipaddress.my",
+      "server_port": 8443,
+      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/pZl4eOQt7Dex?ed=2048",
+        "headers": {
+          "Host": "zizifnjavid.foreverstar1356.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "Domain29-TLS_3",
+      "type": "vless",
+      "server": "www.glassdoor.com",
       "server_port": 2087,
       "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
       "tls": {
@@ -6499,30 +6522,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/LIVsuoY7R508?ed=2048",
-        "headers": {
-          "Host": "zizifnjavid.foreverstar1356.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain29-TLS_3",
-      "type": "vless",
-      "server": "www.glassdoor.com",
-      "server_port": 8443,
-      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/VpcVTux1Uifl?ed=2048",
+        "path": "/tdyZUyIe0D0c?ed=2048",
         "headers": {
           "Host": "zizifnjavid.foreverstar1356.workers.dev"
         }
@@ -6533,74 +6533,6 @@
       "tag": "Domain30-TLS_3",
       "type": "vless",
       "server": "www.ipchicken.com",
-      "server_port": 8443,
-      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/xUVgkkROgQYt?ed=2048",
-        "headers": {
-          "Host": "zizifnjavid.foreverstar1356.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "Domain31-TLS_3",
-      "type": "vless",
-      "server": "static.cloudflareinsights.com",
-      "server_port": 2053,
-      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/jI076f8qgB0q?ed=2048",
-        "headers": {
-          "Host": "zizifnjavid.foreverstar1356.workers.dev"
-        }
-      },
-      "domain_resolver": "dns-direct"
-    },
-    {
-      "tag": "IP1-TLS_4",
-      "type": "vless",
-      "server": "104.26.4.66",
-      "server_port": 2096,
-      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/9q2nxPQmuNV0?ed=2048",
-        "headers": {
-          "Host": "zizifnjavid.foreverstar1356.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP2-TLS_4",
-      "type": "vless",
-      "server": "104.17.222.45",
       "server_port": 2083,
       "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
       "tls": {
@@ -6613,17 +6545,18 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/88piZYqzwm11?ed=2048",
+        "path": "/gYhoVZfC5YK8?ed=2048",
         "headers": {
           "Host": "zizifnjavid.foreverstar1356.workers.dev"
         }
-      }
+      },
+      "domain_resolver": "dns-direct"
     },
     {
-      "tag": "IP3-TLS_4",
+      "tag": "Domain31-TLS_3",
       "type": "vless",
-      "server": "104.20.6.217",
-      "server_port": 2096,
+      "server": "static.cloudflareinsights.com",
+      "server_port": 2083,
       "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
       "tls": {
         "enabled": true,
@@ -6635,7 +6568,74 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/JWdKGARHdoBF?ed=2048",
+        "path": "/QZ6GYrK00wTF?ed=2048",
+        "headers": {
+          "Host": "zizifnjavid.foreverstar1356.workers.dev"
+        }
+      },
+      "domain_resolver": "dns-direct"
+    },
+    {
+      "tag": "IP1-TLS_4",
+      "type": "vless",
+      "server": "104.26.4.66",
+      "server_port": 8443,
+      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/lptxwP3Ecxct?ed=2048",
+        "headers": {
+          "Host": "zizifnjavid.foreverstar1356.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP2-TLS_4",
+      "type": "vless",
+      "server": "104.17.222.45",
+      "server_port": 2087,
+      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/qPaKuNigcP7S?ed=2048",
+        "headers": {
+          "Host": "zizifnjavid.foreverstar1356.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP3-TLS_4",
+      "type": "vless",
+      "server": "104.20.6.217",
+      "server_port": 2083,
+      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/8bZFV4WmThb8?ed=2048",
         "headers": {
           "Host": "zizifnjavid.foreverstar1356.workers.dev"
         }
@@ -6657,7 +6657,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/hVqqq5G5Re66?ed=2048",
+        "path": "/ICwJcvH2eVWV?ed=2048",
         "headers": {
           "Host": "zizifnjavid.foreverstar1356.workers.dev"
         }
@@ -6667,7 +6667,7 @@
       "tag": "IP5-TLS_4",
       "type": "vless",
       "server": "104.16.147.222",
-      "server_port": 2083,
+      "server_port": 2053,
       "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
       "tls": {
         "enabled": true,
@@ -6679,7 +6679,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/LTsi2wF2Yyoo?ed=2048",
+        "path": "/U7qiNCRc2Qiz?ed=2048",
         "headers": {
           "Host": "zizifnjavid.foreverstar1356.workers.dev"
         }
@@ -6689,7 +6689,7 @@
       "tag": "IP6-TLS_4",
       "type": "vless",
       "server": "162.159.195.168",
-      "server_port": 8443,
+      "server_port": 2053,
       "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
       "tls": {
         "enabled": true,
@@ -6701,7 +6701,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/aVZHVvDjMhTB?ed=2048",
+        "path": "/rVEd2iOeWWLs?ed=2048",
         "headers": {
           "Host": "zizifnjavid.foreverstar1356.workers.dev"
         }
@@ -6711,7 +6711,7 @@
       "tag": "IP7-TLS_4",
       "type": "vless",
       "server": "104.16.92.40",
-      "server_port": 2087,
+      "server_port": 2096,
       "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
       "tls": {
         "enabled": true,
@@ -6723,7 +6723,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/NyBJC4c1mMnl?ed=2048",
+        "path": "/gHa7DlGwigWN?ed=2048",
         "headers": {
           "Host": "zizifnjavid.foreverstar1356.workers.dev"
         }
@@ -6733,7 +6733,7 @@
       "tag": "IP8-TLS_4",
       "type": "vless",
       "server": "141.101.115.9",
-      "server_port": 443,
+      "server_port": 2096,
       "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
       "tls": {
         "enabled": true,
@@ -6745,7 +6745,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/dubFLPOOXH3j?ed=2048",
+        "path": "/lwCV2SQ65vCq?ed=2048",
         "headers": {
           "Host": "zizifnjavid.foreverstar1356.workers.dev"
         }
@@ -6767,7 +6767,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/KlEPgCKUt0ai?ed=2048",
+        "path": "/uBWeA76qCQ6K?ed=2048",
         "headers": {
           "Host": "zizifnjavid.foreverstar1356.workers.dev"
         }
@@ -6777,7 +6777,7 @@
       "tag": "IP10-TLS_4",
       "type": "vless",
       "server": "104.18.79.210",
-      "server_port": 443,
+      "server_port": 2096,
       "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
       "tls": {
         "enabled": true,
@@ -6789,7 +6789,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/s93nKEv1x6cz?ed=2048",
+        "path": "/yIsGxKvXLzna?ed=2048",
         "headers": {
           "Host": "zizifnjavid.foreverstar1356.workers.dev"
         }
@@ -6811,7 +6811,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/a5Jyn8aqZIbE?ed=2048",
+        "path": "/aozcQEQBcxGW?ed=2048",
         "headers": {
           "Host": "zizifnjavid.foreverstar1356.workers.dev"
         }
@@ -6821,6 +6821,116 @@
       "tag": "IP12-TLS_4",
       "type": "vless",
       "server": "104.27.196.57",
+      "server_port": 8443,
+      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/mqdVcsH4Q12h?ed=2048",
+        "headers": {
+          "Host": "zizifnjavid.foreverstar1356.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP13-TLS_4",
+      "type": "vless",
+      "server": "104.18.79.88",
+      "server_port": 8443,
+      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/1fKesdm8RvIg?ed=2048",
+        "headers": {
+          "Host": "zizifnjavid.foreverstar1356.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP14-TLS_4",
+      "type": "vless",
+      "server": "8.6.112.63",
+      "server_port": 8443,
+      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/2PzAhkw31Emm?ed=2048",
+        "headers": {
+          "Host": "zizifnjavid.foreverstar1356.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP15-TLS_4",
+      "type": "vless",
+      "server": "104.27.196.20",
+      "server_port": 2053,
+      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/juuUzpB1i2EU?ed=2048",
+        "headers": {
+          "Host": "zizifnjavid.foreverstar1356.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP16-TLS_4",
+      "type": "vless",
+      "server": "190.93.245.178",
+      "server_port": 8443,
+      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/iMAlqiiDhoD9?ed=2048",
+        "headers": {
+          "Host": "zizifnjavid.foreverstar1356.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP17-TLS_4",
+      "type": "vless",
+      "server": "104.17.222.118",
       "server_port": 2096,
       "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
       "tls": {
@@ -6833,117 +6943,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/VoMTst3QvM01?ed=2048",
-        "headers": {
-          "Host": "zizifnjavid.foreverstar1356.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP13-TLS_4",
-      "type": "vless",
-      "server": "104.18.79.88",
-      "server_port": 2053,
-      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/gt9t3jasrqM6?ed=2048",
-        "headers": {
-          "Host": "zizifnjavid.foreverstar1356.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP14-TLS_4",
-      "type": "vless",
-      "server": "8.6.112.63",
-      "server_port": 443,
-      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/kf9GFMkgQJbo?ed=2048",
-        "headers": {
-          "Host": "zizifnjavid.foreverstar1356.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP15-TLS_4",
-      "type": "vless",
-      "server": "104.27.196.20",
-      "server_port": 2083,
-      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/FPIYXIgYcpLC?ed=2048",
-        "headers": {
-          "Host": "zizifnjavid.foreverstar1356.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP16-TLS_4",
-      "type": "vless",
-      "server": "190.93.245.178",
-      "server_port": 2087,
-      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/lGQSEDrAwSZj?ed=2048",
-        "headers": {
-          "Host": "zizifnjavid.foreverstar1356.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP17-TLS_4",
-      "type": "vless",
-      "server": "104.17.222.118",
-      "server_port": 2087,
-      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/yz9VEw8FUu8E?ed=2048",
+        "path": "/xzwchPVjk8Ux?ed=2048",
         "headers": {
           "Host": "zizifnjavid.foreverstar1356.workers.dev"
         }
@@ -6953,50 +6953,6 @@
       "tag": "IP18-TLS_4",
       "type": "vless",
       "server": "141.101.115.78",
-      "server_port": 2083,
-      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/FvagjDDvDzw7?ed=2048",
-        "headers": {
-          "Host": "zizifnjavid.foreverstar1356.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP19-TLS_4",
-      "type": "vless",
-      "server": "188.114.96.167",
-      "server_port": 2087,
-      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
-      "tls": {
-        "enabled": true,
-        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/hLpArS7Ndurq?ed=2048",
-        "headers": {
-          "Host": "zizifnjavid.foreverstar1356.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "IP20-TLS_4",
-      "type": "vless",
-      "server": "162.159.193.17",
       "server_port": 2053,
       "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
       "tls": {
@@ -7009,7 +6965,51 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/Nmkrebt7AYRV?ed=2048",
+        "path": "/JDP56gqVvVHf?ed=2048",
+        "headers": {
+          "Host": "zizifnjavid.foreverstar1356.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP19-TLS_4",
+      "type": "vless",
+      "server": "188.114.96.167",
+      "server_port": 2083,
+      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/GctviY1E3a8D?ed=2048",
+        "headers": {
+          "Host": "zizifnjavid.foreverstar1356.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "IP20-TLS_4",
+      "type": "vless",
+      "server": "162.159.193.17",
+      "server_port": 2087,
+      "uuid": "6bd588b5-f5fd-4690-8fab-35bffbab80ab",
+      "tls": {
+        "enabled": true,
+        "server_name": "zizifnjavid.foreverstar1356.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/qoNlAQSJOawI?ed=2048",
         "headers": {
           "Host": "zizifnjavid.foreverstar1356.workers.dev"
         }
@@ -7071,4 +7071,4 @@
     }
   }
 }
-// Updated at: 2026-09-30T14:41:17.617850 //
+// Updated at: 2026-09-30T20:36:36.191673 //
